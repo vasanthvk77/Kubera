@@ -203,3 +203,9 @@
 ## 2026-08-07 08:13:02.904Z console.warn
 - text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
 
+## 2026-08-07 09:38:00.648Z console.error
+- text: [vite] Failed to reload /src/components/mining/Act1Scene.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+
+## 2026-08-07 09:38:02.465Z console.error
+- text: [vite] Failed to reload /src/components/mining/Act2Scene.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+
