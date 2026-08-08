@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { X, Plus } from 'lucide-react';
+import goldStoneVideo from '@/assests/gold_stone.mp4';
+import goldbarVideo from '@/assests/gold_bar.mp4';
+import coalVideo from '@/assests/coal.mp4';
+import goldDustVideo from '@/assests/gold_dust.mp4';
+import cockingCoalVideo from '@/assests/cocking_coal.mp4';
 
 /* ---------- Rotating wireframe globe with illuminated routes ---------- */
 export function Globe({ pins = [] }) {
@@ -67,32 +72,69 @@ export function Globe({ pins = [] }) {
 }
 
 /* ---------- Product showcase with hover specs ---------- */
+
+const VIDEO_MAP = {
+  gold_stone:   { src: goldStoneVideo,   key: 'gold-stone-video'   },
+  gold_bar:     { src: goldbarVideo,     key: 'gold-bar-video'     },
+  coal:         { src: coalVideo,        key: 'coal-video'         },
+  gold_dust:    { src: goldDustVideo,    key: 'gold-dust-video'    },
+  cocking_coal: { src: cockingCoalVideo, key: 'cocking-coal-video' },
+};
+
 export function ProductShowcase({ products }) {
   const [active, setActive] = useState(0);
+  const activeProduct = products[active];
+  const videoEntry = activeProduct.model ? VIDEO_MAP[activeProduct.model] : null;
+
   return (
     <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
       <div className="relative">
         <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-[#D4AF37]/15 bg-[#141414]">
           <AnimatePresence mode="wait">
-            <motion.img
-              key={products[active].image}
-              src={products[active].image}
-              alt={products[active].name}
-              initial={{ opacity: 0, scale: 1.06 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="lazy"
-            />
+            {videoEntry ? (
+              /* ── Video product ── */
+              <motion.div
+                key={videoEntry.key}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0"
+              >
+                <video
+                  src={videoEntry.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+            ) : (
+              /* ── Regular product image ── */
+              <motion.img
+                key={activeProduct.image}
+                src={activeProduct.image}
+                alt={activeProduct.name}
+                initial={{ opacity: 0, scale: 1.06 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+            )}
           </AnimatePresence>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-6">
-            <p className="font-mono2 text-[10px] uppercase tracking-[0.3em] text-[#D4AF37]">{products[active].purity}</p>
-            <h3 className="font-display text-3xl text-white">{products[active].name}</h3>
+
+          {/* Label overlay — always on top */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent" />
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 p-6">
+            <p className="font-mono2 text-[10px] uppercase tracking-[0.3em] text-[#D4AF37]">{activeProduct.purity}</p>
+            <h3 className="font-display text-3xl text-white">{activeProduct.name}</h3>
           </div>
         </div>
       </div>
+
       <ul className="divide-y divide-white/[0.07] border-y border-white/[0.07]">
         {products.map((p, i) => (
           <li key={p.name}>

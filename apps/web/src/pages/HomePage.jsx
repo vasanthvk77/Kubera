@@ -505,12 +505,12 @@ function SceneWhyUs() {
 
 /* ============================ SCENE 11 & 12 ============================ */
 const PRODUCTS = [
-  { name: 'Gold Bars', purity: '99.99% LBMA good delivery', spec: '1 kg / 400 oz', image: IMG.bars },
-  { name: 'Gold Ore', purity: 'Run-of-mine, 4.2 g/t', spec: 'Bulk / containerised', image: IMG.ore },
-  { name: 'Gold Dust', purity: '92–96% fineness', spec: 'Sealed consignment', image: IMG.bars },
-  { name: 'Steam Coal', purity: '6,300 kcal/kg GAR', spec: '50,000 t cargoes', image: IMG.cokingCoal },
-  { name: 'Coking Coal', purity: 'Low-ash, CSR 62', spec: 'Panamax shipments', image: IMG.cokingCoal },
-  { name: 'Industrial Coal', purity: '4,800 kcal/kg', spec: 'Rail-delivered', image: IMG.coal_mining },
+  { name: 'Gold Bars', purity: '99.99% LBMA good delivery', spec: '1 kg / 400 oz', image: IMG.bars, model: 'gold_bar' },
+  { name: 'Gold Ore', purity: 'Run-of-mine, 4.2 g/t', spec: 'Bulk / containerised', image: IMG.ore, model: 'gold_stone' },
+  { name: 'Gold Dust', purity: '92–96% fineness', spec: 'Sealed consignment', image: IMG.bars, model: 'gold_dust' },
+  { name: 'Steam Coal', purity: '6,300 kcal/kg GAR', spec: '50,000 t cargoes', image: IMG.cokingCoal, model: 'coal' },
+  { name: 'Coking Coal', purity: 'Low-ash, CSR 62', spec: 'Panamax shipments', image: IMG.cokingCoal, model: 'cocking_coal' },
+  { name: 'Industrial Coal', purity: '4,800 kcal/kg', spec: 'Rail-delivered', image: IMG.coal_mining, model: 'cocking_coal' },
   { name: 'Copper, Iron Ore, Lithium, Nickel', purity: 'Pipeline — from 2027', spec: 'Offtake enquiries open', image: IMG.ore },
 ];
 
