@@ -6,12 +6,13 @@ import goldbarVideo from '@/assests/gold_bar.mp4';
 import coalVideo from '@/assests/coal.mp4';
 import goldDustVideo from '@/assests/gold_dust.mp4';
 import cockingCoalVideo from '@/assests/cocking_coal.mp4';
+import industrialCoal from '@/assests/IndustrialCoal.mp4';
 
 /* ---------- Rotating wireframe globe with illuminated routes ---------- */
 export function Globe({ pins = [] }) {
-  const reduce = useReducedMotion();
+  const reduce = false;
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[520px]">
+    <div className="relative mx-auto aspect-square w-full max-w-[280px] sm:max-w-[360px] md:max-w-[440px] lg:max-w-[520px]">
       <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_32%_28%,rgba(212,175,55,0.22),transparent_62%)] blur-2xl" />
       <motion.svg
         viewBox="0 0 200 200"
@@ -74,15 +75,19 @@ export function Globe({ pins = [] }) {
 /* ---------- Product showcase with hover specs ---------- */
 
 const VIDEO_MAP = {
-  gold_stone:   { src: goldStoneVideo,   key: 'gold-stone-video'   },
-  gold_bar:     { src: goldbarVideo,     key: 'gold-bar-video'     },
-  coal:         { src: coalVideo,        key: 'coal-video'         },
-  gold_dust:    { src: goldDustVideo,    key: 'gold-dust-video'    },
+  gold_stone: { src: goldStoneVideo, key: 'gold-stone-video' },
+  gold_bar: { src: goldbarVideo, key: 'gold-bar-video' },
+  coal: { src: coalVideo, key: 'coal-video' },
+  gold_dust: { src: goldDustVideo, key: 'gold-dust-video' },
   cocking_coal: { src: cockingCoalVideo, key: 'cocking-coal-video' },
+  industrialCoal: { src: industrialCoal, key: 'industrial-coal-video' },
 };
 
-export function ProductShowcase({ products }) {
-  const [active, setActive] = useState(0);
+export function ProductShowcase({ products, activeIdx, setActiveIdx }) {
+  const [internal, setInternal] = useState(0);
+  const isControlled = activeIdx !== undefined && setActiveIdx !== undefined;
+  const active = isControlled ? activeIdx : internal;
+  const setActive = isControlled ? setActiveIdx : setInternal;
   const activeProduct = products[active];
   const videoEntry = activeProduct.model ? VIDEO_MAP[activeProduct.model] : null;
 

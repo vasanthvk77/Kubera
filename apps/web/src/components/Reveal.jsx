@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Reveal = ({ children, delay = 0, y = 24, className = '', as = 'div', once = true, ...rest }) => {
-    const reduceMotion = useReducedMotion();
+    const reduceMotion = false;
     const MotionTag = motion[as] || motion.div;
     // `delay` is in seconds (framer-motion's unit), but callers often pass the
     // milliseconds they'd use with a CSS transition. No reveal waits 10s, so a

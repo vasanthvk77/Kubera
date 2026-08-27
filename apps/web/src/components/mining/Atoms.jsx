@@ -20,7 +20,7 @@ export function Heading({ children, className = '' }) {
 }
 
 export function Rise({ children, delay = 0, y = 28, className = '' }) {
-  const reduce = useReducedMotion();
+  const reduce = false;
   if (reduce) return <div className={className}>{children}</div>;
   return (
     <motion.div
@@ -36,9 +36,16 @@ export function Rise({ children, delay = 0, y = 28, className = '' }) {
 }
 
 /* Parallax image layer: image drifts slower than scroll + slow zoom */
-export function ParallaxImage({ src, alt, className = '', strength = 90, scaleTo = 1.12, overlay = 'bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/35 to-[#0D0D0D]' }) {
+export function ParallaxImage({
+  src, alt, className = '',
+  strength = 90,
+  scaleTo = 1.12,
+  defaultZoomPct = 118,
+  defaultShiftUpPct = 9,
+  overlay = 'bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/35 to-[#0D0D0D]',
+}) {
   const ref = useRef(null);
-  const reduce = useReducedMotion();
+  const reduce = false;
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
   const y = useTransform(scrollYProgress, [0, 1], [-strength, strength]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, scaleTo]);
@@ -48,8 +55,13 @@ export function ParallaxImage({ src, alt, className = '', strength = 90, scaleTo
         src={src}
         alt={alt}
         loading="lazy"
-        style={reduce ? undefined : { y, scale }}
-        className="h-[118%] w-full -translate-y-[9%] object-cover"
+        style={reduce ? undefined : {
+          y, scale,
+          height: `${defaultZoomPct}%`,
+          width: '100%',
+          transform: `translateY(-${defaultShiftUpPct}%)`,
+          objectFit: 'cover',
+        }}
       />
       <div className={`absolute inset-0 ${overlay}`} />
     </div>
@@ -59,7 +71,7 @@ export function ParallaxImage({ src, alt, className = '', strength = 90, scaleTo
 export function Counter({ value, decimals = 0, suffix = '', prefix = '', className = '' }) {
   const ref = useRef(null);
   const [n, setN] = useState(0);
-  const reduce = useReducedMotion();
+  const reduce = false;
   useEffect(() => {
     if (reduce) { setN(value); return; }
     const el = ref.current;
@@ -89,7 +101,7 @@ export function Counter({ value, decimals = 0, suffix = '', prefix = '', classNa
 
 export function MagneticButton({ children, variant = 'gold', className = '', ...props }) {
   const ref = useRef(null);
-  const reduce = useReducedMotion();
+  const reduce = false;
   const onMove = (e) => {
     if (reduce || !ref.current) return;
     const r = ref.current.getBoundingClientRect();
@@ -116,7 +128,7 @@ export function MagneticButton({ children, variant = 'gold', className = '', ...
 }
 
 export function Particles({ count = 26, tone = '#D4AF37' }) {
-  const reduce = useReducedMotion();
+  const reduce = false;
   if (reduce) return null;
   const bits = Array.from({ length: count }, (_, i) => i);
   return (

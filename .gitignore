@@ -15,6 +15,6 @@ build/
 # VS Code
 .vscode/
 
-# OS files
+# OS filesS
 .DS_Store
 Thumbs.db
