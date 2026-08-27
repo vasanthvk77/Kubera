@@ -3920,3 +3920,817 @@
 ## 2026-08-27 11:10:47.389Z console.warn
 - text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
 
+## 2026-08-27 11:11:04.532Z click
+- element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"10Why Choose UsSeven reasons buyersstay for decades.Responsible MiningGlobal LogisticsQuality AssuranceInternational TradeExperienced TeamGovernment Compliance24×7 Support"}
+
+## 2026-08-27 11:17:05.165Z load
+- url: http://localhost:3000/#contact
+
+## 2026-08-27 11:17:05.963Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-27 11:17:06.219Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-27 11:17:06.220Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-27 11:17:06.405Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-27 11:28:09.901Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Partner With Us"}
+
+## 2026-08-27 11:28:09.967Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787819915928:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:28:09.973Z console.error
+- text: 
+    Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s hideClose hideclose 
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at Dialog (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:54:5)
+        at ContactFormModal (http://localhost:3000/src/components/contact...
+
+## 2026-08-27 11:28:14.778Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Company / OrganizationPositionEmail Address *Phone Number *Country / Region *Select a country / regionAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweEnquiry Type — Products of InterestGold BarsGold OreGold DustSteam CoalCoking CoalIndustrial CoalCopper, Iron Ore, Lithium, NickelBecome a Trading PartnerRequest Bussines ProposalOptional — you may select multiple products or leave empty for a general enquiry.Message *Send MessageClose"}
+
+## 2026-08-27 11:28:39.266Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Company / OrganizationPositionEmail Address *Phone Number *Country / Region *Select a country / regionAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweEnquiry Type — Products of InterestGold BarsGold OreGold DustSteam CoalCoking CoalIndustrial CoalCopper, Iron Ore, Lithium, NickelBecome a Trading PartnerRequest Bussines ProposalOptional — you may select multiple products or leave empty for a general enquiry.Message *Send MessageClose"}
+
+## 2026-08-27 11:28:47.167Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830126204:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:28:47.190Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830126204:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:28:52.204Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830131044:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:28:52.263Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830131044:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:28:55.617Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830135030:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:28:55.634Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830135030:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:29:34.616Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Become a Trading Partner"}
+
+## 2026-08-27 11:29:34.620Z click
+- element: {"tag":"button","role":"checkbox","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:29:40.194Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830179076:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:29:40.239Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830179076:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:30:06.002Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Become a Trading Partner"}
+
+## 2026-08-27 11:30:22.729Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Email Address *Phone Number *Country / Region *Select a country / regionAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweMessage *Become a Trading PartnerBecome a Trading PartnerSend MessageClose"}
+
+## 2026-08-27 11:30:27.365Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:30:27.565Z click
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:30:34.436Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:30:34.577Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830234078:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:30:34.627Z console.error
+- text: 
+    Warning: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.%s Trading-partner 
+        at div
+        at div
+        at FieldWrapper (http://localhost:3000/src/components/contact/ContactFormModal.jsx?t=1787830234078:174:25)
+        at div
+        at form
+        at div
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-WIVQD3L3.js?v=4ecc7fba:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=4ecc7fba:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=4ecc7fba:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=4ecc7fba:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=4ecc7fba:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=4ecc7fba:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7fba:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-BC4NMZNS.js?v=4ecc7fba:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=4ecc7...
+
+## 2026-08-27 11:35:38.493Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Become a Trading Partner"}
+
+## 2026-08-27 11:35:38.495Z click
+- element: {"tag":"button","role":"checkbox","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:35:39.186Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Become a Trading Partner"}
+
+## 2026-08-27 11:35:39.188Z click
+- element: {"tag":"button","role":"checkbox","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:38:36.806Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Email Address *Phone Number *Country / Region *Select a country / regionAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweMessage (Optional)Become a Trading PartnerBecome a Trading PartnerBecome a Trading PartnerMessage is required (minimum 10 characters).Send MessageClose"}
+
+## 2026-08-27 11:38:37.693Z click
+- element: {"tag":"label","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Become a Trading Partner"}
+
+## 2026-08-27 11:38:37.694Z click
+- element: {"tag":"button","role":"checkbox","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:38:38.518Z click
+- element: {"tag":"button","role":"checkbox","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:38:39.270Z click
+- element: {"tag":"button","role":"checkbox","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:39:42.738Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Close","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:39:44.480Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Partner With Us"}
+
+## 2026-08-27 11:39:46.290Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:39:46.509Z click
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:39:47.958Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:39:49.085Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Email Address *Phone Number *Country / Region *Select a country / regionAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweMessage (Optional)Send MessageClose"}
+
+## 2026-08-27 11:39:49.418Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:39:49.638Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:39:50.543Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Vasantha kumar B","valueLength":16,"text":""}
+
+## 2026-08-27 11:39:50.544Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Vasantha kumar B","valueLength":16,"text":""}
+
+## 2026-08-27 11:39:50.544Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:39:50.544Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:39:50.545Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:39:50.545Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:39:50.545Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"09514203043","valueLength":11,"text":""}
+
+## 2026-08-27 11:39:50.545Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"09514203043","valueLength":11,"text":""}
+
+## 2026-08-27 11:39:50.545Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:39:50.548Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:39:50.572Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:39:50.611Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:39:50.611Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Vasantha kumar B","valueLength":16,"text":""}
+
+## 2026-08-27 11:39:51.912Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Email Address *Phone Number *Country / Region *IndiaAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweMessage (Optional)Send MessageClose"}
+
+## 2026-08-27 11:40:00.350Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Smith","valueLength":5,"text":""}
+
+## 2026-08-27 11:40:00.350Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Smith","valueLength":5,"text":""}
+
+## 2026-08-27 11:40:00.352Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:40:00.573Z click
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:40:08.215Z change
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"tytyytytyt","valueLength":10,"text":""}
+
+## 2026-08-27 11:40:08.215Z blur
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"tytyytytyt","valueLength":10,"text":""}
+
+## 2026-08-27 11:40:11.274Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"tytyytytyt","valueLength":10,"text":""}
+
+## 2026-08-27 11:40:12.332Z blur
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"tytyytytyt","valueLength":10,"text":""}
+
+## 2026-08-27 11:40:12.552Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Send Message"}
+
+## 2026-08-27 11:40:12.554Z submit
+- action: http://localhost:3000/#products
+- fields: [{"label":"name","type":"text","value":"Smith","length":5,"redacted":false},{"label":"email","type":"email","value":"vasanth2004vk@gmail.com","length":23,"redacted":false},{"label":"phone","type":"tel","value":"09514203043","length":11,"redacted":false},{"label":"Country / Region *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"India","length":5,"redacted":false},{"label":"message","type":"textarea","value":"tytyytytyt","length":10,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-27 11:40:12.856Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:40:20.413Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Close toast","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:41:54.595Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Partner With Us"}
+
+## 2026-08-27 11:41:55.677Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:41:55.892Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:42:03.211Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Stark","valueLength":5,"text":""}
+
+## 2026-08-27 11:42:03.211Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Stark","valueLength":5,"text":""}
+
+## 2026-08-27 11:42:03.213Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:42:03.439Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:42:04.273Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:42:04.275Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:42:04.275Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:42:04.275Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"09514203043","valueLength":11,"text":""}
+
+## 2026-08-27 11:42:04.275Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"09514203043","valueLength":11,"text":""}
+
+## 2026-08-27 11:42:04.275Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:42:04.279Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:42:04.299Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:42:04.327Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:42:04.327Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:42:05.727Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:42:06.123Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Email Address *Phone Number *Country / Region *IndiaAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweMessage (Optional)Send MessageClose"}
+
+## 2026-08-27 11:42:06.495Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\tKuberaRESOURCESOperationsTradingSustainabilityProductsPresencePartner With UsEst. 1994 — Operating across 18 countriesFrom the Earth's Riches to Global MarketsResponsible Mining • Sustainable Growth • Global Commodity TradingExplore OperationsPartner With Us01Journey Beneath the EarthSix hundred metresof measured descent.0 m4 m60 m180 m410 m620 m620 m0 – 4 mTop SoilStripped, catalogued and stored for post-closure rehabilitation.4 – 60 mRock FormationOverburden benched in 10 m lifts with controlled blasting.60 – 180 mMineral DepositsPolymetallic zones assayed every 1.5 m of drill core.180 – 410 mGold VeinsQuartz-hosted reefs averaging 4.2 g/t across strike.410 – 620 mCoal SeamsLow-ash bituminous seams, 6,300 kcal/kg gross calorific value.02ExplorationWe know the groundbefore we break it.Four disciplines, sequenced. Nothing enters development until the orebody has been modelled, drilled and independently verified.Satellite SurveyGeological MappingCore DrillingResource AnalysisSatellite SurveyMultispectral and hyperspectral passes narrow 40,000 km² of tenement into ranked anomalies.40,000 km² screened03 — Gold MiningLight finds it before we do.\n        /* Spotlight circle travelling left to right */\n        .gold-beam-spot {\n          position : absolute;\n          top      : 50%;\n          width    : 340px;\n          height   : 340px;\n          transform: translate(-50%, -50%);\n          border-radius: 50%;\n          background: radial-gradient(\n            circle at 50% 50%,\n            rgba(255, 248, 180, 0.48) 0%,\n            rgba(212, 175,  55, 0.30) 24%,\n            rgba(184, 115,  51, 0.12) 58%,\n            transparent 88%\n          );\n          filter   : blur(24px);\n          animation: goldSpotMove 5.5s cubic-bezier(0.42, 0.02, 0.28, 1) infinite;\n          will-change: left, opacity;\n        }\n\n        .gold-beam-soft {\n          position : absolute;\n          top      : 50%;\n          width    : 560px;\n          height   : 420px;\n          transform: trans..."}
+
+## 2026-08-27 11:42:08.410Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Australia","valueLength":9,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:42:08.453Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Australia"}
+
+## 2026-08-27 11:42:09.115Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:42:09.335Z click
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:42:13.791Z change
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"testing email","valueLength":13,"text":""}
+
+## 2026-08-27 11:42:13.792Z blur
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"testing email","valueLength":13,"text":""}
+
+## 2026-08-27 11:42:14.004Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Send Message"}
+
+## 2026-08-27 11:42:14.009Z submit
+- action: http://localhost:3000/#products
+- fields: [{"label":"name","type":"text","value":"Stark","length":5,"redacted":false},{"label":"email","type":"email","value":"vasanth2004vk@gmail.com","length":23,"redacted":false},{"label":"phone","type":"tel","value":"09514203043","length":11,"redacted":false},{"label":"Country / Region *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Australia","length":9,"redacted":false},{"label":"message","type":"textarea","value":"testing email","length":13,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-27 11:42:14.287Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:43:01.410Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Partner With Us"}
+
+## 2026-08-27 11:43:02.353Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:43:02.571Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:43:07.294Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Stark","valueLength":5,"text":""}
+
+## 2026-08-27 11:43:07.294Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"Stark","valueLength":5,"text":""}
+
+## 2026-08-27 11:43:07.296Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:43:07.514Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:43:08.159Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:43:08.161Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:43:08.161Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:43:08.162Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"09514203043","valueLength":11,"text":""}
+
+## 2026-08-27 11:43:08.163Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"09514203043","valueLength":11,"text":""}
+
+## 2026-08-27 11:43:08.163Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:43:08.166Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:43:08.186Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:43:08.216Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"India","valueLength":5,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:43:08.216Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:43:08.693Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"vasanth2004vk@gmail.com","valueLength":23,"text":""}
+
+## 2026-08-27 11:43:08.789Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\tKuberaRESOURCESOperationsTradingSustainabilityProductsPresencePartner With UsEst. 1994 — Operating across 18 countriesFrom the Earth's Riches to Global MarketsResponsible Mining • Sustainable Growth • Global Commodity TradingExplore OperationsPartner With Us01Journey Beneath the EarthSix hundred metresof measured descent.0 m4 m60 m180 m410 m620 m620 m0 – 4 mTop SoilStripped, catalogued and stored for post-closure rehabilitation.4 – 60 mRock FormationOverburden benched in 10 m lifts with controlled blasting.60 – 180 mMineral DepositsPolymetallic zones assayed every 1.5 m of drill core.180 – 410 mGold VeinsQuartz-hosted reefs averaging 4.2 g/t across strike.410 – 620 mCoal SeamsLow-ash bituminous seams, 6,300 kcal/kg gross calorific value.02ExplorationWe know the groundbefore we break it.Four disciplines, sequenced. Nothing enters development until the orebody has been modelled, drilled and independently verified.Satellite SurveyGeological MappingCore DrillingResource AnalysisSatellite SurveyMultispectral and hyperspectral passes narrow 40,000 km² of tenement into ranked anomalies.40,000 km² screened03 — Gold MiningLight finds it before we do.\n        /* Spotlight circle travelling left to right */\n        .gold-beam-spot {\n          position : absolute;\n          top      : 50%;\n          width    : 340px;\n          height   : 340px;\n          transform: translate(-50%, -50%);\n          border-radius: 50%;\n          background: radial-gradient(\n            circle at 50% 50%,\n            rgba(255, 248, 180, 0.48) 0%,\n            rgba(212, 175,  55, 0.30) 24%,\n            rgba(184, 115,  51, 0.12) 58%,\n            transparent 88%\n          );\n          filter   : blur(24px);\n          animation: goldSpotMove 5.5s cubic-bezier(0.42, 0.02, 0.28, 1) infinite;\n          will-change: left, opacity;\n        }\n\n        .gold-beam-soft {\n          position : absolute;\n          top      : 50%;\n          width    : 560px;\n          height   : 420px;\n          transform: trans..."}
+
+## 2026-08-27 11:43:11.064Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Australia","valueLength":9,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:43:11.108Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Australia"}
+
+## 2026-08-27 11:43:11.967Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:43:12.189Z click
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:43:39.809Z change
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"I would have an idea to invest with you on your mining bussiness","valueLength":64,"text":""}
+
+## 2026-08-27 11:43:39.809Z blur
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"I would have an idea to invest with you on your mining bussiness","valueLength":64,"text":""}
+
+## 2026-08-27 11:43:40.031Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Send Message"}
+
+## 2026-08-27 11:43:40.033Z submit
+- action: http://localhost:3000/#products
+- fields: [{"label":"name","type":"text","value":"Stark","length":5,"redacted":false},{"label":"email","type":"email","value":"vasanth2004vk@gmail.com","length":23,"redacted":false},{"label":"phone","type":"tel","value":"09514203043","length":11,"redacted":false},{"label":"Country / Region *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Australia","length":9,"redacted":false},{"label":"message","type":"textarea","value":"I would have an idea to invest with you on your mining bussiness","length":64,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-27 11:43:40.462Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"","valueLength":0,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:44:17.178Z click
+- element: {"tag":"li","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Message received. We will get back to you soon!Partner With Us — Stark"}
+
+## 2026-08-27 11:44:17.952Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Close toast","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 11:44:19.360Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Partner With Us"}
+
+## 2026-08-27 11:44:21.482Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Send Message"}
+
+## 2026-08-27 11:44:21.484Z submit
+- action: http://localhost:3000/#products
+- fields: [{"label":"name","type":"text","value":"","length":0,"redacted":false},{"label":"email","type":"email","value":"","length":0,"redacted":false},{"label":"phone","type":"tel","value":"","length":0,"redacted":false},{"label":"Country / Region *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"","length":0,"redacted":false},{"label":"message","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-27 11:44:21.486Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:22.778Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:23.001Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:25.122Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"ddasd","valueLength":5,"text":""}
+
+## 2026-08-27 11:44:25.122Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"ddasd","valueLength":5,"text":""}
+
+## 2026-08-27 11:44:25.168Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\tKuberaRESOURCESOperationsTradingSustainabilityProductsPresencePartner With UsEst. 1994 — Operating across 18 countriesFrom the Earth's Riches to Global MarketsResponsible Mining • Sustainable Growth • Global Commodity TradingExplore OperationsPartner With Us01Journey Beneath the EarthSix hundred metresof measured descent.0 m4 m60 m180 m410 m620 m620 m0 – 4 mTop SoilStripped, catalogued and stored for post-closure rehabilitation.4 – 60 mRock FormationOverburden benched in 10 m lifts with controlled blasting.60 – 180 mMineral DepositsPolymetallic zones assayed every 1.5 m of drill core.180 – 410 mGold VeinsQuartz-hosted reefs averaging 4.2 g/t across strike.410 – 620 mCoal SeamsLow-ash bituminous seams, 6,300 kcal/kg gross calorific value.02ExplorationWe know the groundbefore we break it.Four disciplines, sequenced. Nothing enters development until the orebody has been modelled, drilled and independently verified.Satellite SurveyGeological MappingCore DrillingResource AnalysisSatellite SurveyMultispectral and hyperspectral passes narrow 40,000 km² of tenement into ranked anomalies.40,000 km² screened03 — Gold MiningLight finds it before we do.\n        /* Spotlight circle travelling left to right */\n        .gold-beam-spot {\n          position : absolute;\n          top      : 50%;\n          width    : 340px;\n          height   : 340px;\n          transform: translate(-50%, -50%);\n          border-radius: 50%;\n          background: radial-gradient(\n            circle at 50% 50%,\n            rgba(255, 248, 180, 0.48) 0%,\n            rgba(212, 175,  55, 0.30) 24%,\n            rgba(184, 115,  51, 0.12) 58%,\n            transparent 88%\n          );\n          filter   : blur(24px);\n          animation: goldSpotMove 5.5s cubic-bezier(0.42, 0.02, 0.28, 1) infinite;\n          will-change: left, opacity;\n        }\n\n        .gold-beam-soft {\n          position : absolute;\n          top      : 50%;\n          width    : 560px;\n          height   : 420px;\n          transform: trans..."}
+
+## 2026-08-27 11:44:26.894Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Austria","valueLength":7,"text":"AfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabwe"}
+
+## 2026-08-27 11:44:26.993Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Austria"}
+
+## 2026-08-27 11:44:28.845Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Send Message"}
+
+## 2026-08-27 11:44:28.847Z submit
+- action: http://localhost:3000/#products
+- fields: [{"label":"name","type":"text","value":"","length":0,"redacted":false},{"label":"email","type":"email","value":"","length":0,"redacted":false},{"label":"phone","type":"tel","value":"ddasd","length":5,"redacted":false},{"label":"Country / Region *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Austria","length":7,"redacted":false},{"label":"message","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-27 11:44:28.849Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:30.046Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:30.255Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"d","valueLength":1,"text":""}
+
+## 2026-08-27 11:44:32.669Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"dsaddsad","valueLength":8,"text":""}
+
+## 2026-08-27 11:44:32.669Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"dsaddsad","valueLength":8,"text":""}
+
+## 2026-08-27 11:44:32.670Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:32.894Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:35.152Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"sad","valueLength":3,"text":""}
+
+## 2026-08-27 11:44:35.152Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"name","type":"text","id":"cf-name","placeholder":"John Smith","label":"name","value":"sad","valueLength":3,"text":""}
+
+## 2026-08-27 11:44:35.369Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Send Message"}
+
+## 2026-08-27 11:44:35.371Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"dsaddsad","valueLength":8,"text":""}
+
+## 2026-08-27 11:44:35.997Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"dsaddsad","valueLength":8,"text":""}
+
+## 2026-08-27 11:44:35.998Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:36.217Z click
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:36.887Z click
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"","valueLength":0,"text":""}
+
+## 2026-08-27 11:44:39.016Z change
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"dasdasdsadasd","valueLength":13,"text":""}
+
+## 2026-08-27 11:44:39.016Z blur
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":"message","type":null,"id":"cf-message","placeholder":"Tell us about your requirements, quantities, destination port, timeline...","label":"message","value":"dasdasdsadasd","valueLength":13,"text":""}
+
+## 2026-08-27 11:44:39.252Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Send Message"}
+
+## 2026-08-27 11:44:39.254Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"dsaddsad","valueLength":8,"text":""}
+
+## 2026-08-27 11:44:41.052Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"email","type":"email","id":"cf-email","placeholder":"you@company.com","label":"email","value":"dsaddsad","valueLength":8,"text":""}
+
+## 2026-08-27 11:44:44.164Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"ddasd","valueLength":5,"text":""}
+
+## 2026-08-27 11:44:44.238Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"ddasd","valueLength":5,"text":""}
+
+## 2026-08-27 11:44:44.458Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"ddasd","valueLength":5,"text":""}
+
+## 2026-08-27 11:44:45.404Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"ddasd","valueLength":5,"text":""}
+
+## 2026-08-27 11:44:47.105Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":"phone","type":"tel","id":"cf-phone","placeholder":"+1 555 123 4567","label":"phone","value":"ddasd","valueLength":5,"text":""}
+
+## 2026-08-27 11:44:47.766Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Email Address *Please enter a valid Email Address.Phone Number *Phone Number must be at least 7 digits.Country / Region *AustriaAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweMessage (Optional)Send MessageClose"}
+
+## 2026-08-27 11:44:52.251Z click
+- element: {"tag":"div","role":"dialog","ariaLabel":null,"name":null,"type":null,"id":"radix-:r5:","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera ResourcesPartner With UsFill in the form below and our team will respond within 24 hours.Full Name *Email Address *Please enter a valid Email Address.Phone Number *Phone Number must be at least 7 digits.Country / Region *AustriaAfghanistanAlbaniaAlgeriaArgentinaArmeniaAustraliaAustriaAzerbaijanBahrainBangladeshBelarusBelgiumBhutanBoliviaBrazilBruneiBulgariaCambodiaCanadaChileChinaColombiaCosta RicaCroatiaCubaCyprusCzech RepublicDenmarkDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFinlandFranceGeorgiaGermanyGhanaGreeceGuatemalaHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsraelItalyJamaicaJapanJordanKazakhstanKenyaKuwaitKyrgyzstanLaosLatviaLebanonLithuaniaLuxembourgMalaysiaMaldivesMaltaMexicoMoldovaMonacoMongoliaMoroccoMozambiqueMyanmarNepalNetherlandsNew ZealandNicaraguaNigeriaNorwayOmanPakistanPalestinePanamaParaguayPeruPhilippinesPolandPortugalQatarRomaniaRussiaSaudi ArabiaSerbiaSingaporeSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTunisiaTurkeyTurkmenistanUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUruguayUzbekistanVenezuelaVietnamYemenZambiaZimbabweMessage (Optional)Send MessageClose"}
+
+## 2026-08-27 11:45:30.313Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Close","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+

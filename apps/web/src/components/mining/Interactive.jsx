@@ -181,7 +181,7 @@ export function Certifications({ items }) {
             <span className="font-mono2 text-[10px] tracking-[0.3em] text-[#B87333]">{c.code}</span>
             <h3 className="mt-4 font-display text-2xl text-white">{c.title}</h3>
             <p className="mt-3 text-sm leading-relaxed text-white/45">{c.summary}</p>
-            <Plus className="mt-6 h-4 w-4 text-[#D4AF37] transition-transform duration-300 group-hover:rotate-90" strokeWidth={1.5} />
+
           </motion.button>
         ))}
       </div>

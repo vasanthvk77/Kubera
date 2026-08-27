@@ -2049,10 +2049,12 @@ function SceneWhyUs() {
                   className="font-display"
                   sx={{
                     fontFamily: 'inherit',
-                    fontSize: 'clamp(2.2rem, 5.2vw, 4.6rem)',
+                    fontSize: 'clamp(1.6rem, 6.5vw, 4.6rem)',
                     fontWeight: 600,
-                    lineHeight: 1.02,
-                    whiteSpace: 'nowrap',
+                    lineHeight: 1.08,
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word',
+                    overflowWrap: 'break-word',
                     color: 'transparent',
                     backgroundImage: 'linear-gradient(100deg, #FFFFFF 0%, #E9E2CC 33%, #FFF8C4 46%, #D4AF37 50%, #FFFFFF 54%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0.05) 100%)',
                     backgroundSize: '300% 100%',

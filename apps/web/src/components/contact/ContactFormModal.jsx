@@ -33,9 +33,6 @@ const PRODUCT_OPTIONS = [
   { slug: 'coking-coal', name: 'Coking Coal' },
   { slug: 'industrial-coal', name: 'Industrial Coal' },
   { slug: 'pipeline-metals', name: 'Copper, Iron Ore, Lithium, Nickel' },
-  { slug: 'Trading-partner', name: 'Become a Trading Partner' },
-  { slug: 'Trading-partner', name: 'Request Bussines Proposal' },
-
 ];
 
 const COUNTRIES = [
@@ -178,9 +175,7 @@ const formSchema = z.object({
     .regex(/^[+]?[\d\s\-\.\(\)\/]+$/, 'Please enter a valid Phone Number.'),
   country: z.string().min(2, 'Country / Region is required.'),
   enquiryType: z.array(z.string()).optional().default([]),
-  message: z
-    .string()
-    .min(10, 'Message is required (minimum 10 characters).'),
+  message: z.string().optional().or(z.literal('')),
 });
 
 const FieldWrapper = ({ children, className = '' }) => (
@@ -460,7 +455,7 @@ export default function ContactFormModal({
               {errors.name && <FieldError>{errors.name.message}</FieldError>}
             </FieldWrapper>
 
-            <FieldWrapper>
+            {/* <FieldWrapper>
               <Label htmlFor="cf-company" className="font-mono2 text-[10px] uppercase tracking-[0.22em] text-white/55">
                 Company / Organization
               </Label>
@@ -478,8 +473,9 @@ export default function ContactFormModal({
                   {...register('company')}
                 />
               </div>
-            </FieldWrapper>
+            </FieldWrapper> */}
 
+{/* 
             <FieldWrapper>
               <Label htmlFor="cf-position" className="font-mono2 text-[10px] uppercase tracking-[0.22em] text-white/55">
                 Position
@@ -498,7 +494,7 @@ export default function ContactFormModal({
                   {...register('position')}
                 />
               </div>
-            </FieldWrapper>
+            </FieldWrapper> */}
 
             <FieldWrapper>
               <Label htmlFor="cf-email" className="font-mono2 text-[10px] uppercase tracking-[0.22em] text-white/55">
@@ -590,59 +586,11 @@ export default function ContactFormModal({
               {errors.country && <FieldError>{errors.country.message}</FieldError>}
             </FieldWrapper>
 
-            <FieldWrapper className="sm:col-span-2">
-              <div className="flex items-start justify-between gap-3">
-                <Label className="font-mono2 text-[10px] uppercase tracking-[0.22em] text-white/55">
-                  <span className="inline-flex items-center gap-2">
-                    <Package className="h-3.5 w-3.5 text-[#D4AF37]/80" strokeWidth={1.5} />
-                    Enquiry Type — Products of Interest
-                  </span>
-                </Label>
-                {selectedEnquiry.length > 0 && (
-                  <span className="font-mono2 text-[10px] tracking-[0.2em] text-[#D4AF37]/80">
-                    {selectedEnquiry.length} SELECTED
-                  </span>
-                )}
-              </div>
-              <div className="mt-3 grid grid-cols-1 gap-2.5 rounded-sm border border-white/[0.08] bg-white/[0.02] p-4 sm:grid-cols-2">
-                {PRODUCT_OPTIONS.map((p) => {
-                  let checked = false;
-                  try { checked = selectedEnquiry.indexOf(p.slug) !== -1; } catch (_) {}
-                  return (
-                    <label
-                      key={p.slug}
-                      className={cn(
-                        'group flex cursor-pointer items-center gap-3 rounded-sm border px-3.5 py-3 transition-all duration-200',
-                        checked
-                          ? 'border-[#D4AF37]/50 bg-[#D4AF37]/[0.08]'
-                          : 'border-white/[0.07] bg-transparent hover:border-white/20 hover:bg-white/[0.03]'
-                      )}
-                    >
-                      <Checkbox
-                        checked={checked}
-                        onCheckedChange={(v) => toggleProduct(p.slug, !!v)}
-                        className="h-4 w-4 border-white/30 data-[state=checked]:border-[#D4AF37] data-[state=checked]:bg-[#D4AF37]"
-                      />
-                      <span
-                        className={cn(
-                          'text-[13px] font-medium tracking-wide transition-colors',
-                          checked ? 'text-white' : 'text-white/65 group-hover:text-white/85'
-                        )}
-                      >
-                        {p.name}
-                      </span>
-                    </label>
-                  );
-                })}
-              </div>
-              <p className="mt-2 text-[11px] text-white/35">
-                Optional — you may select multiple products or leave empty for a general enquiry.
-              </p>
-            </FieldWrapper>
+
 
             <FieldWrapper className="sm:col-span-2">
               <Label htmlFor="cf-message" className="font-mono2 text-[10px] uppercase tracking-[0.22em] text-white/55">
-                Message <span className="text-[#D4AF37]">*</span>
+                Message <span className="text-white/35">(Optional)</span>
               </Label>
               <div className="relative">
                 <div className="pointer-events-none absolute left-3.5 top-3.5 z-10 text-[#D4AF37]/70">

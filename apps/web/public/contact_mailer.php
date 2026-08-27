@@ -248,7 +248,7 @@ $htmlContent = <<<HTML
                 </td>
             </tr>
 
-            <tr style="border-bottom: 1px solid #efefef;">
+            <!-- <tr style="border-bottom: 1px solid #efefef;">
                 <td style="padding: 16px 0; width: 42px; vertical-align: top;">
                     <div style="width: 42px; height: 42px; border: 1px solid #cfcfcf; border-radius: 6px; text-align: center; line-height: 42px; font-size: 18px; color: #111; background: #fff;">🏢</div>
                 </td>
@@ -256,9 +256,9 @@ $htmlContent = <<<HTML
                     <span style="display: block; font-size: 11px; font-weight: 700; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Company / Organization</span>
                     <span style="font-size: 15px; font-weight: 600; color: #111;">{$company}</span>
                 </td>
-            </tr>
+            </tr> -->
 
-            <tr style="border-bottom: 1px solid #efefef;">
+            <!-- <tr style="border-bottom: 1px solid #efefef;">
                 <td style="padding: 16px 0; width: 42px; vertical-align: top;">
                     <div style="width: 42px; height: 42px; border: 1px solid #cfcfcf; border-radius: 6px; text-align: center; line-height: 42px; font-size: 18px; color: #111; background: #fff;">💼</div>
                 </td>
@@ -266,7 +266,7 @@ $htmlContent = <<<HTML
                     <span style="display: block; font-size: 11px; font-weight: 700; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Position</span>
                     <span style="font-size: 15px; font-weight: 600; color: #111;">{$position}</span>
                 </td>
-            </tr>
+            </tr> -->
 
             <tr style="border-bottom: 1px solid #efefef;">
                 <td style="padding: 16px 0; width: 42px; vertical-align: top;">
@@ -300,7 +300,7 @@ $htmlContent = <<<HTML
                 </td>
             </tr>
 
-            <tr style="border-bottom: 1px solid #efefef;">
+            <!-- <tr style="border-bottom: 1px solid #efefef;">
                 <td style="padding: 16px 0; width: 42px; vertical-align: top;">
                     <div style="width: 42px; height: 42px; border: 1px solid #cfcfcf; border-radius: 6px; text-align: center; line-height: 42px; font-size: 18px; color: #111; background: #fff;">📦</div>
                 </td>
@@ -308,7 +308,7 @@ $htmlContent = <<<HTML
                     <span style="display: block; font-size: 11px; font-weight: 700; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Enquiry Type (Products)</span>
                     <span style="font-size: 15px; font-weight: 600; color: #111;">{$enquiryTypeDisplay}</span>
                 </td>
-            </tr>
+            </tr> -->
         </table>
 
         <div style="margin-top: 35px; margin-bottom: 15px; font-size: 17px; font-weight: 700; text-transform: uppercase; color: #111;">
