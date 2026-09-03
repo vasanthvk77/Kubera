@@ -61,6 +61,7 @@ export function ParallaxImage({
           width: '100%',
           transform: `translateY(-${defaultShiftUpPct}%)`,
           objectFit: 'cover',
+          willChange: 'transform',
         }}
       />
       <div className={`absolute inset-0 ${overlay}`} />
@@ -70,7 +71,7 @@ export function ParallaxImage({
 
 export function Counter({ value, decimals = 0, suffix = '', prefix = '', className = '' }) {
   const ref = useRef(null);
-  const [n, setN] = useState(0);
+  const [n, setN] = useState(0);  
   const reduce = false;
   useEffect(() => {
     if (reduce) { setN(value); return; }
@@ -101,9 +102,12 @@ export function Counter({ value, decimals = 0, suffix = '', prefix = '', classNa
 
 export function MagneticButton({ children, variant = 'gold', className = '', ...props }) {
   const ref = useRef(null);
-  const reduce = false;
+  // Only run magnetic effect on non-touch devices (pointer: fine = mouse)
+  const isFinePointer = typeof window !== 'undefined'
+    ? window.matchMedia('(pointer: fine)').matches
+    : false;
   const onMove = (e) => {
-    if (reduce || !ref.current) return;
+    if (!isFinePointer || !ref.current) return;
     const r = ref.current.getBoundingClientRect();
     const x = (e.clientX - r.left - r.width / 2) * 0.22;
     const y = (e.clientY - r.top - r.height / 2) * 0.3;

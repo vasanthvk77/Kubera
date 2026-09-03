@@ -23,7 +23,7 @@ import coal_mining from '../assests/coal_mining.webp';
 import mineView from '../assests/mine_view.webp';
 import HeroBannerBg from '../assests/HeroBannerBg.jpg';
 import machine from '../assests/machine.png';
-import goldStone from '../assests/minarals.png';
+// import minarals from '../assests/minarals.png';
 import coal from '../assests/coal.webp';
 import tunel from '../assests/tunel.webp';
 import port from '../assests/port.webp';
@@ -33,6 +33,8 @@ import sandCloseup from '../assests/sand_closeup.webp';
 import workers from '../assests/workers.webp';
 import miningSunset from '../assests/mining_sunset.webp';
 import logo from "../assests/LogoWhite.png";
+
+const minarals = "https://res.cloudinary.com/dirkxodl3/image/upload/v1787890408/minarals_anacvc.png"
 
 const IMG = {
   hero: mineView,
@@ -46,7 +48,7 @@ const IMG = {
   green: wind,
   bars: goldBar,
   cokingCoal: coal,
-  ore: goldStone,
+  ore: minarals,
   sunset: miningSunset,
 };
 
@@ -62,11 +64,11 @@ const PARALLAX = {
 
   /* ── GLOBAL MASTER CONTROLS (affects ALL sections at once) ───────────── */
 
-  GLOBAL_SCROLL_DRIFT_MULTIPLIER: 1.5,
+  GLOBAL_SCROLL_DRIFT_MULTIPLIER: 1,
   /* ↑↑↑ How far images slide UP/DOWN while you scroll.
      1.0 = normal (original default) |  1.5 = 50% stronger  |  2.0 = twice as far  |  0.5 = half as far  */
 
-  GLOBAL_SCROLL_ZOOM_MULTIPLIER: 1.5,
+  GLOBAL_SCROLL_ZOOM_MULTIPLIER: 1,
   /* ↑↑↑ How much images GROW (zoom in) while you scroll through the section.
      1.0 = normal (original default) |  1.5 = 50% more zoom  |  2.0 = twice as much zoom  |  0 = no zoom at all  */
 
@@ -82,23 +84,23 @@ const PARALLAX = {
   /* ── PER-SECTION OVERRIDES (leave as 1.0 to use global, or customize) ── */
 
   SECTION_HERO: {
-    scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollDriftMultiplier: 1,
+    scrollZoomMultiplier: 1,
   },
 
   SECTION_01_OPERATIONS_JOURNEY: {
-    scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollDriftMultiplier: 1.5,
+    scrollZoomMultiplier: 1.5,
   },
 
   SECTION_02_EXPLORATION: {
-    scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollDriftMultiplier: 1.5,
+    scrollZoomMultiplier: 1,
   },
 
   SECTION_03_GOLD_MINING: {
-    scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollDriftMultiplier: 1.5,
+    scrollZoomMultiplier: 1.5,
   },
 
   SECTION_04_COAL_MINING: {
@@ -107,8 +109,8 @@ const PARALLAX = {
   },
 
   SECTION_05_MINERAL_PROCESSING: {
-    scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollDriftMultiplier: 1,
+    scrollZoomMultiplier: 1,
   },
 
   SECTION_06_GLOBAL_TRADING: {
@@ -127,13 +129,13 @@ const PARALLAX = {
   },
 
   SECTION_13_CERTIFICATIONS_AND_14_GLOBAL_PRESENCE: {
-    scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollDriftMultiplier: 0.5,
+    scrollZoomMultiplier: 0.5,
   },
 
   SECTION_FINALE_CONTACT: {
-    scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollDriftMultiplier: 1.5,
+    scrollZoomMultiplier: 1,
   },
 };
 
@@ -218,8 +220,8 @@ function Header({ openContactModal }) {
         <a href="#top" className="flex items-baseline gap-1.5 sm:gap-2">
           <span className="
   font-display
-  text-[15px]
-  sm:text-[18px]
+  text-[22px]
+  sm:text-[22px]
   md:text-[30px]
   lg:text-[35px]
   tracking-[0.12em]
@@ -231,7 +233,7 @@ function Header({ openContactModal }) {
           </span>
           <span className="
   font-mono2
-  text-[6px]
+  text-[9px]
   sm:text-[10px]
   md:text-[12px]
   lg:text-[13px]
@@ -255,7 +257,7 @@ function Header({ openContactModal }) {
           <MagneticButton variant="ghost" onClick={() => openContactModal?.('Partner With Us')}>Partner With Us</MagneticButton>
         </div>
         <button className="lg:hidden text-white p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu" onClick={() => setOpen((v) => !v)}>
-          {open ? <X className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.5} /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.5} />}
+          {open ? <X className="h-7 w-7" strokeWidth={1.5} /> : <Menu className="h-7 w-7" strokeWidth={1.5} />}
         </button>
       </div>
       {open && (
@@ -283,7 +285,13 @@ function Hero({ openContactModal }) {
   const mouseRef = useRef({ tx: 0, ty: 0, cx: 0, cy: 0, active: false });
   const [, forceTick] = useState(0);
 
+  // Only run mouse RAF loop on devices with a fine pointer (mouse), not touch screens
+  const hasFinePointer = typeof window !== 'undefined'
+    ? window.matchMedia('(pointer: fine)').matches
+    : false;
+
   useEffect(() => {
+    if (!hasFinePointer) return; // skip entirely on mobile/touch
     let rafId;
     function tick() {
       const m = mouseRef.current;
@@ -309,7 +317,7 @@ function Hero({ openContactModal }) {
     }
     rafId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafId);
-  }, []);
+  }, [hasFinePointer]);
 
   function handleMouseMove(e) {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -357,7 +365,7 @@ function Hero({ openContactModal }) {
 
       <motion.div
         style={reduce ? undefined : { opacity: fade }}
-        className="hero-content-layer relative mx-auto flex min-h-[100dvh] max-w-[90rem] flex-col justify-end px-6 pb-24 pt-32 lg:px-10 lg:pb-28"
+        className="hero-content-layer relative mx-auto flex min-h-[100dvh] max-w-[90rem] flex-col justify-center sm:justify-end px-6 pb-16 pt-24 sm:pb-24 sm:pt-32 lg:px-10 lg:pb-28"
       >
         <Rise>
           <div style={{ transform: `translate3d(${TAGLINE_X}px, ${TAGLINE_Y}px, 0)`, willChange: 'transform' }}>
@@ -516,7 +524,7 @@ function SceneStrata() {
       style={{ height: '600vh' }}
       className="relative"
     >
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-32 bg-gradient-to-b from-[#0D0D0D] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-32 bg-gradient-to-b from-[#0D0D0D] to-transparent" />
       <div className="sticky top-0 h-screen overflow-hidden">
 
         {/* Background */}
@@ -533,11 +541,11 @@ function SceneStrata() {
           animate={{ backgroundColor: LAYERS[activeLayer].color + '44' }}
           transition={{ duration: 0.9, ease: 'easeInOut' }}
         />
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-32 bg-gradient-to-b from-[#0D0D0D] to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-10 sm:h-20 bg-gradient-to-b from-[#0D0D0D] to-transparent" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0D0D0D]" />
 
         {/* ── Main content ── */}
-        <div className="relative flex h-full flex-col justify-center max-w-[90rem] mx-auto px-6 lg:px-10">
+        <div className="relative flex h-full flex-col justify-center max-w-[90rem] mx-auto px-6 lg:px-10 pt-20 sm:pt-0">
 
           {/* Heading */}
           <div className="mb-8">
@@ -612,7 +620,7 @@ function SceneStrata() {
             </div>
 
             {/* ── Layer rows ── */}
-            <div className="flex-1 pl-3 sm:pl-4 md:pl-6">
+            <div className="flex-1 pl-8 sm:pl-4 md:pl-6">
               {LAYERS.map((l, i) => {
                 const isActive = i === activeLayer;
                 const isPast = i < activeLayer;
@@ -737,7 +745,7 @@ function SceneExploration() {
     <section
       id="exploration"
       ref={sectionRef}
-      className="relative overflow-hidden py-32 lg:py-44"
+      className="relative overflow-hidden py-16 lg:py-44"
       onMouseMove={handleMouseMove}
       style={{ willChange: 'transform' }}
     >
@@ -884,8 +892,8 @@ function SceneExploration() {
               <motion.button
                 key={e.title}
                 onClick={() => setActive(i)}
-                initial={reduce ? { opacity: 0 } : { opacity: 0, x: -26, rotateX: -12, filter: 'blur(4px)' }}
-                whileInView={reduce ? { opacity: 1 } : { opacity: 1, x: 0, rotateX: 0, filter: 'blur(0px)' }}
+                initial={reduce ? { opacity: 0 } : { opacity: 0, x: -26, rotateX: -12 }}
+                whileInView={reduce ? { opacity: 1 } : { opacity: 1, x: 0, rotateX: 0 }}
                 viewport={{ once: true, margin: '-10% 0px' }}
                 transition={{
                   duration: 0.75,
@@ -918,8 +926,8 @@ function SceneExploration() {
         {/* ════════ RIGHT COLUMN — Glass Card ════════ */}
         <motion.div
           className="relative"
-          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 60, scale: 0.94, rotateX: 6, filter: 'blur(10px)' }}
-          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)' }}
+          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 60, scale: 0.94, rotateX: 6 }}
+          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0 }}
           viewport={{ once: true, margin: '-12% 0px' }}
           transition={{
             duration: 1.1,
@@ -1201,7 +1209,7 @@ function GoldSweepText() {
 
 function SceneGold() {
   return (
-    <section id="gold-mining" className="relative overflow-hidden py-32 lg:py-48">
+    <section id="gold-mining" className="relative overflow-hidden py-16 lg:py-48">
       <ParallaxImage
         src={IMG.goldVein}
         alt="Illuminated gold vein underground"
@@ -1304,7 +1312,7 @@ const PIPELINE = ['Ore Extraction', 'Crushing', 'Grinding', 'Separation', 'Refin
 
 function SceneProcessing() {
   return (
-    <section id="processing" className="relative overflow-hidden py-32 lg:py-44">
+    <section id="processing" className="relative overflow-hidden py-16 lg:py-44">
       <ParallaxImage src={IMG.plant} alt="Mineral processing facility interior" {..._getParallax(PARALLAX.SECTION_05_MINERAL_PROCESSING, 70, 1.12)} overlay="bg-[#0D0D0D]/60" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0D0D0D] to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0D0D0D] to-transparent" />
@@ -1361,11 +1369,15 @@ function SceneTrading() {
   const bgY = useTransform(scrollYProgress, [0, 1], [tradingParallax.strength, -tradingParallax.strength]);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1, tradingParallax.scaleTo]);
 
+  const hasFinePointer = typeof window !== 'undefined'
+    ? window.matchMedia('(pointer: fine)').matches
+    : false;
+
   const mouseRef = useRef({ tx: 0, ty: 0, cx: 0, cy: 0 });
   const [, forceTick] = useState(0);
 
   useEffect(() => {
-    if (reduce) return;
+    if (reduce || !hasFinePointer) return; // skip RAF on mobile/touch
     let rafId;
     function tick() {
       const m = mouseRef.current;
@@ -1382,7 +1394,7 @@ function SceneTrading() {
     }
     rafId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafId);
-  }, [reduce]);
+  }, [reduce, hasFinePointer]);
 
   function handleMouseMove(e) {
     if (reduce) return;
@@ -1398,7 +1410,7 @@ function SceneTrading() {
     <section
       ref={sectionRef}
       id="trading"
-      className="relative overflow-hidden py-32 lg:py-44"
+      className="relative overflow-hidden py-16 lg:py-44"
       onMouseMove={handleMouseMove}
       style={{ willChange: 'transform' }}
     >
@@ -1542,8 +1554,8 @@ function SceneTrading() {
             ].map(([k, v], i) => (
               <motion.div
                 key={k}
-                initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24, filter: 'blur(6px)' }}
-                whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, filter: 'blur(0px)' }}
+                initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
+                whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-10% 0px' }}
                 transition={{
                   duration: 0.6,
@@ -1570,8 +1582,8 @@ function SceneTrading() {
 
         <motion.div
           className="relative"
-          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 60, scale: 0.94, rotateX: 6, filter: 'blur(10px)' }}
-          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)' }}
+          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 60, scale: 0.94, rotateX: 6 }}
+          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0 }}
           viewport={{ once: true, margin: '-12% 0px' }}
           transition={{
             duration: 1.1,
@@ -1579,7 +1591,9 @@ function SceneTrading() {
             ease: [0.16, 1, 0.3, 1],
           }}
           style={reduce ? undefined : {
-            transform: `translate3d(${m.cx * 18}px, ${m.cy * 14}px, 0) perspective(1200px) rotateX(${m.cy * -2}deg) rotateY(${m.cx * 2.5}deg)`,
+            transform: hasFinePointer
+              ? `translate3d(${m.cx * 18}px, ${m.cy * 14}px, 0) perspective(1200px) rotateX(${m.cy * -2}deg) rotateY(${m.cx * 2.5}deg)`
+              : undefined,
             transformStyle: 'preserve-3d',
             willChange: 'transform',
           }}
@@ -1622,7 +1636,7 @@ function SceneTrading() {
       </div>
 
       {/* Logistics chain */}
-      <div className="relative mx-auto mt-28 max-w-[90rem] px-6 lg:px-10">
+      <div className="relative mx-auto mt-10 sm:mt-28 max-w-[90rem] px-6 lg:px-10">
         <motion.div
           className="mb-6 flex items-center gap-4"
           initial={{ opacity: 0, x: -20 }}
@@ -1679,8 +1693,8 @@ function SceneTrading() {
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-center">
           <motion.div
             className="relative overflow-hidden rounded-sm border border-white/[0.08]"
-            initial={reduce ? { opacity: 0 } : { opacity: 0, x: -40, scale: 0.97, filter: 'blur(8px)' }}
-            whileInView={reduce ? { opacity: 1 } : { opacity: 1, x: 0, scale: 1, filter: 'blur(0px)' }}
+            initial={reduce ? { opacity: 0 } : { opacity: 0, x: -40, scale: 0.97 }}
+            whileInView={reduce ? { opacity: 1 } : { opacity: 1, x: 0, scale: 1 }}
             viewport={{ once: true, margin: '-10% 0px' }}
             transition={{
               duration: 1.0,
@@ -1715,8 +1729,8 @@ function SceneTrading() {
               {CHAIN.map((c, i) => (
                 <motion.span
                   key={c.label}
-                  initial={{ opacity: 0, x: -14, filter: 'blur(4px)' }}
-                  whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+                  initial={{ opacity: 0, x: -14 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.75 + i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   className="flex items-center gap-2 font-mono2 text-[10px] uppercase tracking-[0.2em] text-white/70"
@@ -1737,8 +1751,8 @@ function SceneTrading() {
 
           <motion.div
             className="glass rounded-sm p-8 relative"
-            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 50, scale: 0.95, rotateX: -5, filter: 'blur(10px)' }}
-            whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)' }}
+            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 50, scale: 0.95, rotateX: -5 }}
+            whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}
             transition={{
               duration: 1.05,
@@ -2252,7 +2266,7 @@ function SceneCertsAndPresence() {
     <section
       ref={sectionRef}
       id="presence"
-      className="relative overflow-hidden py-32 lg:py-40"
+      className="relative overflow-hidden py-16 lg:py-40"
       onMouseMove={handleMouseMove}
       style={{ willChange: 'transform' }}
     >
@@ -2353,8 +2367,8 @@ function SceneCertsAndPresence() {
           </motion.div>
 
           <motion.div
-            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 32, filter: 'blur(6px)' }}
-            whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, filter: 'blur(0px)' }}
+            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 32 }}
+            whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-14% 0px' }}
             transition={{ duration: 0.95, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -2363,8 +2377,8 @@ function SceneCertsAndPresence() {
         </motion.div>
 
         <motion.div
-          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 28, filter: 'blur(8px)' }}
-          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 28 }}
+          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
           transition={{ duration: 1.0, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="mt-1"
@@ -2487,8 +2501,8 @@ function SceneCertsAndPresence() {
           {/* RIGHT COLUMN - Globe */}
           <motion.div
             className="relative"
-            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 60, scale: 0.92, rotateX: 8, filter: 'blur(12px)' }}
-            whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)' }}
+            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 60, scale: 0.92, rotateX: 8 }}
+            whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0 }}
             viewport={{ once: true, margin: '-12% 0px' }}
             transition={{
               duration: 1.15,
@@ -2733,13 +2747,6 @@ export default function HomePage() {
       }
       requestAnimationFrame(animation);
 
-      try {
-        if (window.history.pushState) {
-          window.history.pushState(null, '', href);
-        } else {
-          window.location.hash = href;
-        }
-      } catch (_) { /* noop */ }
     };
 
     document.addEventListener('click', onClick, { passive: false });

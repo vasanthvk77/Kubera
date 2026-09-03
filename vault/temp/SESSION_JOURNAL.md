@@ -4765,3 +4765,1172 @@
 ## 2026-08-27 12:12:05.474Z console.warn
 - text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
 
+## 2026-08-27 15:37:29.515Z load
+- url: http://localhost:3000/
+
+## 2026-08-27 15:37:30.305Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-27 15:37:30.419Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-27 15:37:30.812Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-27 15:37:30.815Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-27 15:37:30.966Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-27 15:39:43.993Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Partner With Us"}
+
+## 2026-08-27 15:39:44.042Z console.error
+- text: 
+    Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s hideClose hideclose 
+        at div
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=1b0e67aa:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-FGUANBMG.js?v=1b0e67aa:63:7
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=1b0e67aa:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=1b0e67aa:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QODXIUIW.js?v=1b0e67aa:29:5
+        at http://localhost:3000/node_modules/.vite/deps/chunk-3CE77K2Y.js?v=1b0e67aa:237:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-3CE77K2Y.js?v=1b0e67aa:163:58
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=1b0e67aa:21:11)
+        at http://localhost:3000/node_modules/.vite/deps/chunk-3CE77K2Y.js?v=1b0e67aa:154:64
+        at http://localhost:3000/node_modules/.vite/deps/chunk-QDROIPK2.js?v=1b0e67aa:51:11
+        at http://localhost:3000/node_modules/.vite/deps/chunk-VW2CPIY2.js?v=1b0e67aa:43:13
+        at http://localhost:3000/node_modules/.vite/deps/chunk-5ILOVBNV.js?v=1b0e67aa:26:22
+        at Presence (http://localhost:3000/node_modules/.vite/deps/chunk-KS5DOMBR.js?v=1b0e67aa:21:11)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=1b0e67aa:22:15)
+        at DialogPortal (http://localhost:3000/node_modules/.vite/deps/chunk-3CE77K2Y.js?v=1b0e67aa:114:11)
+        at _c3 (http://localhost:3000/src/components/ui/dialog.jsx:34:12)
+        at Provider (http://localhost:3000/node_modules/.vite/deps/chunk-CPKJORG2.js?v=1b0e67aa:22:15)
+        at Dialog (http://localhost:3000/node_modules/.vite/deps/chunk-3CE77K2Y.js?v=1b0e67aa:54:5)
+        at ContactFormModal (http://localhost:3000/src/components/contact...
+
+## 2026-08-27 15:39:46.201Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Close","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-27 15:54:44.002Z window.error
+- message: Uncaught ReferenceError: hasFinePointer is not defined
+- source: http://localhost:3000/src/pages/HomePage.jsx?t=1787846083296
+- line: 2549
+- col: 32
+- stack: 
+    ReferenceError: hasFinePointer is not defined
+        at SceneTrading (http://localhost:3000/src/pages/HomePage.jsx?t=1787846083296:2549:32)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19190:13)
+
+## 2026-08-27 15:54:44.085Z window.error
+- message: Uncaught ReferenceError: hasFinePointer is not defined
+- source: http://localhost:3000/src/pages/HomePage.jsx?t=1787846083296
+- line: 2549
+- col: 32
+- stack: 
+    ReferenceError: hasFinePointer is not defined
+        at SceneTrading (http://localhost:3000/src/pages/HomePage.jsx?t=1787846083296:2549:32)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19190:13)
+
+## 2026-08-27 15:54:44.145Z console.error
+- text: 
+    The above error occurred in the <SceneTrading> component:
+    
+        at SceneTrading (http://localhost:3000/src/pages/HomePage.jsx?t=1787846083296:2128:22)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787846083296:4660:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=3ec8e381:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=3ec8e381:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=3ec8e381:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=3ec8e381:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=3ec8e381:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-27 15:54:44.175Z unhandledrejection
+- message: hasFinePointer is not defined
+- stack: 
+    ReferenceError: hasFinePointer is not defined
+        at SceneTrading (http://localhost:3000/src/pages/HomePage.jsx?t=1787846083296:2549:32)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=1b0e67aa:18932:28)
+
+## 2026-08-27 15:54:44.992Z root.empty
+- url: http://localhost:3000/
+
+## 2026-08-27 15:55:54.481Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-27 15:55:54.498Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-27 15:56:38.495Z load
+- url: http://localhost:3000/
+
+## 2026-08-27 15:56:39.108Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-27 15:56:39.363Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-27 15:56:39.366Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-27 15:56:39.495Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:21:20.004Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:21:21.202Z window.error
+- message: Uncaught ReferenceError: goldStoneVideo is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx
+- line: 6
+- col: 16
+- stack: 
+    ReferenceError: goldStoneVideo is not defined
+        at http://localhost:3000/src/components/mining/Interactive.jsx:6:16
+
+## 2026-08-28 04:21:28.951Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:21:29.089Z window.error
+- message: Uncaught ReferenceError: goldStoneVideo is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx
+- line: 6
+- col: 16
+- stack: 
+    ReferenceError: goldStoneVideo is not defined
+        at http://localhost:3000/src/components/mining/Interactive.jsx:6:16
+
+## 2026-08-28 04:23:35.871Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:23:36.344Z window.error
+- message: Uncaught ReferenceError: goldStoneVideo is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787891010108
+- line: 6
+- col: 16
+- stack: 
+    ReferenceError: goldStoneVideo is not defined
+        at http://localhost:3000/src/components/mining/Interactive.jsx?t=1787891010108:6:16
+
+## 2026-08-28 04:23:50.056Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:23:50.527Z window.error
+- message: Uncaught ReferenceError: goldStoneVideo is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787891026514
+- line: 6
+- col: 16
+- stack: 
+    ReferenceError: goldStoneVideo is not defined
+        at http://localhost:3000/src/components/mining/Interactive.jsx?t=1787891026514:6:16
+
+## 2026-08-28 04:24:58.343Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:24:58.790Z window.error
+- message: Uncaught ReferenceError: minarals is not defined
+- source: http://localhost:3000/src/pages/HomePage.jsx?t=1787891094283
+- line: 68
+- col: 10
+- stack: 
+    ReferenceError: minarals is not defined
+        at http://localhost:3000/src/pages/HomePage.jsx?t=1787891094283:68:10
+
+## 2026-08-28 04:25:21.960Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:25:22.491Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-28 04:25:22.633Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:25:23.058Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:25:23.061Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:25:23.222Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:26:40.090Z click
+- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Traded in grades, not adjectives."}
+
+## 2026-08-28 04:27:36.108Z click
+- element: {"tag":"h2","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Traded in grades, not adjectives."}
+
+## 2026-08-28 04:30:15.546Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Eighteen countries,one desk."}
+
+## 2026-08-28 04:31:03.642Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:31:04.028Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:31:04.220Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:31:04.223Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:31:04.382Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:31:18.659Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-28 04:37:36.238Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:37:36.709Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:37:36.959Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:37:36.962Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:37:37.836Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:38:20.431Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:38:20.653Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:38:20.842Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:38:20.842Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:38:20.962Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:38:40.296Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:38:40.540Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:38:40.767Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:38:40.768Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:38:40.918Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:38:50.462Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:38:50.690Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:38:50.869Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:38:50.870Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:38:50.989Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:40:14.053Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+
+## 2026-08-28 04:40:15.428Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"03Gold DustSealed consignment"}
+
+## 2026-08-28 04:40:23.830Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"04Steam Coal50,000 t cargoes"}
+
+## 2026-08-28 04:40:25.295Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"05Coking CoalPanamax shipments"}
+
+## 2026-08-28 04:40:26.910Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"06Industrial CoalRail-delivered"}
+
+## 2026-08-28 04:40:28.737Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"07Copper, Iron Ore, Lithium, NickelOfftake enquiries open"}
+
+## 2026-08-28 04:41:44.083Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"01Gold Bars1 kg / 400 oz"}
+
+## 2026-08-28 04:41:47.148Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+
+## 2026-08-28 04:43:48.368Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"07Copper, Iron Ore, Lithium, NickelOfftake enquiries open"}
+
+## 2026-08-28 04:53:58.900Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.906Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.907Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.908Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.909Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.909Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.916Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.916Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.917Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.918Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.918Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.919Z window.error
+- message: Uncaught ReferenceError: useRef is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227
+- line: 163
+- col: 20
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 04:53:58.974Z console.error
+- text: 
+    The above error occurred in the <VideoItem> component:
+    
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:161:22)
+        at div
+        at div
+        at div
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:224:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 04:53:58.986Z console.error
+- text: 
+    The above error occurred in the <VideoItem> component:
+    
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:161:22)
+        at div
+        at div
+        at div
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:224:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 04:53:58.987Z console.error
+- text: 
+    The above error occurred in the <VideoItem> component:
+    
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:161:22)
+        at div
+        at div
+        at div
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:224:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 04:53:58.988Z console.error
+- text: 
+    The above error occurred in the <VideoItem> component:
+    
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:161:22)
+        at div
+        at div
+        at div
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:224:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 04:53:58.989Z console.error
+- text: 
+    The above error occurred in the <VideoItem> component:
+    
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:161:22)
+        at div
+        at div
+        at div
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:224:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 04:53:58.989Z console.error
+- text: 
+    The above error occurred in the <VideoItem> component:
+    
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:161:22)
+        at div
+        at div
+        at div
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:224:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787891918881:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 04:53:59.002Z unhandledrejection
+- message: useRef is not defined
+- stack: 
+    ReferenceError: useRef is not defined
+        at VideoItem (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787892838227:163:20)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18932:28)
+
+## 2026-08-28 04:53:59.897Z root.empty
+- url: http://localhost:3000/
+
+## 2026-08-28 04:54:12.377Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:54:12.389Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:56:05.048Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:56:05.714Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:56:05.916Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:56:05.919Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:56:06.052Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:56:14.308Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:56:14.987Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:56:15.178Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:56:15.180Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:56:15.316Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:56:18.483Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 04:56:19.110Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 04:56:19.324Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 04:56:19.327Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 04:56:19.447Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 04:56:50.820Z click
+- element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"20+Mining Sites40+Global Clients12+Export Countries3M+Metric Tons Delivered0%Safety Compliance"}
+
+## 2026-08-28 04:57:16.865Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+
+## 2026-08-28 04:57:18.740Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"03Gold DustSealed consignment"}
+
+## 2026-08-28 05:02:23.038Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:02:23.711Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:02:23.983Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:02:23.985Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:02:24.132Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:02:28.739Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:02:29.482Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:02:29.741Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:02:29.746Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:02:29.918Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:03:03.217Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:03:03.823Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:03:04.057Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:03:04.060Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:03:04.191Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:03:32.821Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+
+## 2026-08-28 05:03:59.191Z click
+- element: {"tag":"video","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-28 05:06:07.425Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+
+## 2026-08-28 05:14:07.902Z window.error
+- message: Uncaught ReferenceError: activeProduct is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508
+- line: 267
+- col: 128
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 05:14:07.913Z window.error
+- message: Uncaught ReferenceError: activeProduct is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508
+- line: 267
+- col: 128
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15972:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 05:14:07.969Z console.error
+- text: 
+    The above error occurred in the <ProductShowcase> component:
+    
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:197:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787893226567:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787893226567:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 05:14:07.990Z unhandledrejection
+- message: activeProduct is not defined
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at updateFunctionComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14630:28)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15972:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18932:28)
+
+## 2026-08-28 05:14:08.899Z root.empty
+- url: http://localhost:3000/
+
+## 2026-08-28 05:15:08.976Z window.error
+- message: Uncaught ReferenceError: activeProduct is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508
+- line: 267
+- col: 128
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 05:15:09.104Z window.error
+- message: Uncaught ReferenceError: activeProduct is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508
+- line: 267
+- col: 128
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 05:15:09.153Z console.error
+- text: 
+    The above error occurred in the <ProductShowcase> component:
+    
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:197:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787894107897:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787894107897:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 05:15:09.157Z unhandledrejection
+- message: activeProduct is not defined
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18786:28)
+        at performSyncWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18932:28)
+
+## 2026-08-28 05:17:07.629Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:17:08.244Z window.error
+- message: Uncaught ReferenceError: activeProduct is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508
+- line: 267
+- col: 128
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 05:17:08.320Z window.error
+- message: Uncaught ReferenceError: activeProduct is not defined
+- source: http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508
+- line: 267
+- col: 128
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at HTMLUnknownElement.callCallback2 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3680:22)
+        at Object.invokeGuardedCallbackDev (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3705:24)
+        at invokeGuardedCallback (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:3739:39)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19818:15)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+
+## 2026-08-28 05:17:08.340Z console.error
+- text: 
+    The above error occurred in the <ProductShowcase> component:
+    
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:197:35)
+        at div
+        at div
+        at section
+        at SceneProducts (http://localhost:3000/src/pages/HomePage.jsx?t=1787894107897:3604:37)
+        at main
+        at div
+        at HomePage (http://localhost:3000/src/pages/HomePage.jsx?t=1787894107897:4661:51)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7572:3)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=10fecf5f:10816:3)
+        at MotionConfig (http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=10fecf5f:677:25)
+        at App
+    
+    Consider adding an error boundary to your tree to customize error handling behavior.
+    Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+## 2026-08-28 05:17:08.341Z window.error
+- message: Uncaught ReferenceError: activeProduct is not defined
+- source: http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f
+- line: 19466
+- col: 13
+- stack: 
+    ReferenceError: activeProduct is not defined
+        at ProductShowcase (http://localhost:3000/src/components/mining/Interactive.jsx?t=1787894047508:267:128)
+        at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:11596:26)
+        at mountIndeterminateComponent (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:14974:21)
+        at beginWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:15962:22)
+        at beginWork$1 (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19806:22)
+        at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19251:20)
+        at workLoopSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19190:13)
+        at renderRootSync (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:19169:15)
+        at recoverFromConcurrentError (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18786:28)
+        at performConcurrentWorkOnRoot (http://localhost:3000/node_modules/.vite/deps/chunk-2OSYCW26.js?v=10fecf5f:18734:30)
+
+## 2026-08-28 05:18:18.069Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:18:18.415Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:18:18.417Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:18:21.612Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:18:25.542Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:18:26.245Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:18:26.490Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:18:26.493Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:18:26.627Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:18:41.410Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:18:42.024Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:18:42.181Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:18:42.184Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:18:42.320Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:19:50.222Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+
+## 2026-08-28 05:23:05.806Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:23:06.521Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:23:06.744Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:23:06.747Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:23:06.887Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:23:25.076Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+
+## 2026-08-28 05:23:27.189Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"03Gold DustSealed consignment"}
+
+## 2026-08-28 05:23:28.904Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"04Steam Coal50,000 t cargoes"}
+
+## 2026-08-28 05:23:30.261Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"06Industrial CoalRail-delivered"}
+
+## 2026-08-28 05:25:20.922Z load
+- url: http://localhost:3000/
+
+## 2026-08-28 05:25:21.452Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-28 05:25:21.688Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-28 05:25:21.689Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-28 05:25:21.819Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+
+## 2026-08-28 05:25:24.960Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"03Gold DustSealed consignment"}
+
+## 2026-08-28 05:25:26.981Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"05Coking CoalPanamax shipments"}
+
+## 2026-08-28 05:25:28.099Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"06Industrial CoalRail-delivered"}
+
+## 2026-08-28 05:25:29.476Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"07Copper, Iron Ore, Lithium, NickelOfftake enquiries open"}
+
+## 2026-08-28 05:25:43.868Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"02Gold OreBulk / containerised"}
+

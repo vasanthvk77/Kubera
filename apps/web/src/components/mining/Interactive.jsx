@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { X, Plus } from 'lucide-react';
-import goldStoneVideo from '@/assests/gold_stone.mp4';
-import goldbarVideo from '@/assests/gold_bar.mp4';
-import coalVideo from '@/assests/coal.mp4';
-import goldDustVideo from '@/assests/gold_dust.mp4';
-import cockingCoalVideo from '@/assests/cocking_coal.mp4';
-import industrialCoal from '@/assests/IndustrialCoal.mp4';
+// import goldStoneVideo from '@/assests/gold_stone.mp4';
+// import goldbarVideo from '@/assests/gold_bar.mp4';
+// import coalVideo from '@/assests/coal.mp4';
+// import goldDustVideo from '@/assests/gold_dust.mp4';
+// import cockingCoalVideo from '@/assests/cocking_coal.mp4';
+// import industrialCoal from '@/assests/IndustrialCoal.mp4';
+
+const goldStoneVideo = "https://res.cloudinary.com/dirkxodl3/video/upload/v1787890318/gold_stone_iblprj.mp4";
+const goldbarVideo = "https://res.cloudinary.com/dirkxodl3/video/upload/v1787890358/gold_bar_eohyz0.mp4"
+const coalVideo = "https://res.cloudinary.com/dirkxodl3/video/upload/v1787890289/coal_e8pehx.mp4"
+const cockingCoalVideo = "https://res.cloudinary.com/dirkxodl3/video/upload/v1787890342/cocking_coal_yd5dev.mp4"
+const industrialCoal = "https://res.cloudinary.com/dirkxodl3/video/upload/v1787890320/IndustrialCoal_vocgh3.mp4"
+const goldDustVideo = "https://res.cloudinary.com/dirkxodl3/video/upload/v1787890353/gold_dust_v7yrs4.mp4"
+
 
 /* ---------- Rotating wireframe globe with illuminated routes ---------- */
 export function Globe({ pins = [] }) {
@@ -74,6 +82,7 @@ export function Globe({ pins = [] }) {
 
 /* ---------- Product showcase with hover specs ---------- */
 
+
 const VIDEO_MAP = {
   gold_stone: { src: goldStoneVideo, key: 'gold-stone-video' },
   gold_bar: { src: goldbarVideo, key: 'gold-bar-video' },
@@ -88,48 +97,34 @@ export function ProductShowcase({ products, activeIdx, setActiveIdx }) {
   const isControlled = activeIdx !== undefined && setActiveIdx !== undefined;
   const active = isControlled ? activeIdx : internal;
   const setActive = isControlled ? setActiveIdx : setInternal;
-  const activeProduct = products[active];
+  const activeProduct = products?.[active] || products?.[0] || {};
   const videoEntry = activeProduct.model ? VIDEO_MAP[activeProduct.model] : null;
 
   return (
     <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
       <div className="relative">
         <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-[#D4AF37]/15 bg-[#141414]">
-          <AnimatePresence mode="wait">
-            {videoEntry ? (
-              /* ── Video product ── */
-              <motion.div
-                key={videoEntry.key}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0"
-              >
-                <video
-                  src={videoEntry.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="h-full w-full object-cover"
-                />
-              </motion.div>
-            ) : (
-              /* ── Regular product image ── */
-              <motion.img
-                key={activeProduct.image}
-                src={activeProduct.image}
-                alt={activeProduct.name}
-                initial={{ opacity: 0, scale: 1.06 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-            )}
-          </AnimatePresence>
+          {/* Active Product Image Fallback */}
+          <img
+            key={activeProduct.name || 'product-img'}
+            src={activeProduct.image}
+            alt={activeProduct.name}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
+          {/* Single Active Video Player */}
+          {videoEntry && (
+            <video
+              key={videoEntry.key}
+              src={videoEntry.src}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
+            />
+          )}
 
           {/* Label overlay — always on top */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent" />
