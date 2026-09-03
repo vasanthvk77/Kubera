@@ -4734,3 +4734,34 @@
 ## 2026-08-27 11:45:30.313Z click
 - element: {"tag":"button","role":null,"ariaLabel":"Close","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
 
+## 2026-08-27 12:10:12.602Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"© 2026 Kubera Resources Group. All rights reserved.SINGAPORE · JAKARTA · DUBAI · ROTTERDAM"}
+
+## 2026-08-27 12:10:15.327Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"© 2026 Kubera Resources Group. All rights reserved."}
+
+## 2026-08-27 12:11:33.854Z click
+- element: {"tag":"li","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Industrial Coal"}
+
+## 2026-08-27 12:11:35.065Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Kubera RESOURCESIntegrated mining, mineral processing and physical commodity trading across 18 markets. ISO 9001 · 14001 · 45001OperationsGold MiningCoal MiningMineral ExplorationProcessingProductsGold BarsGold OreGold DustSteam CoalCoking CoalIndustrial CoalCopper, Iron Ore & moreTradingDomestic TradingInternational ExportsImport OperationsLogisticsCompanySustainabilityCertificationsNews & MediaContact"}
+
+## 2026-08-27 12:12:04.273Z load
+- url: http://localhost:3000/#products
+
+## 2026-08-27 12:12:04.870Z navigate
+- url: http://localhost:3000/#products
+- via: replaceState
+
+## 2026-08-27 12:12:05.060Z console.warn
+- text: value.onChange(callback) is deprecated. Switch to value.on("change", callback).
+
+## 2026-08-27 12:12:05.310Z console.warn
+- text: THREE.Color: Invalid hex color #7d6548ff
+
+## 2026-08-27 12:12:05.311Z console.warn
+- text: THREE.Color: Invalid hex color #c89361ff
+
+## 2026-08-27 12:12:05.474Z console.warn
+- text: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+

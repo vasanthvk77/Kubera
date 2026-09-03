@@ -2662,8 +2662,10 @@ function Finale({ openContactModal }) {
         </div>
         <div className="border-t border-white/[0.06] px-6 py-6 lg:px-10">
           <div className="mx-auto flex max-w-[90rem] flex-col gap-3 text-[11px] text-white/30 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {new Date().getFullYear()} Kubera Resources Group. All rights reserved.</p>
-            <p className="font-mono2 tracking-[0.2em]">SINGAPORE · JAKARTA · DUBAI · ROTTERDAM</p>
+            <p className="text-center md:text-left sm:text-left">
+              © {new Date().getFullYear()} Kubera Resources Group. All rights reserved.
+            </p>
+            <p className="font-mono2 tracking-[0.2em] text-center md:text-left sm:text-left">SINGAPORE · JAKARTA · DUBAI · ROTTERDAM</p>
           </div>
         </div>
       </footer>
@@ -2719,12 +2721,12 @@ export default function HomePage() {
         const timeElapsed = currentTime - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
         // easeInOutCubic curve
-        const easeInOutCubic = progress < 0.5 
-          ? 4 * progress * progress * progress 
+        const easeInOutCubic = progress < 0.5
+          ? 4 * progress * progress * progress
           : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-          
+
         window.scrollTo(0, startY + distance * easeInOutCubic);
-        
+
         if (timeElapsed < duration) {
           requestAnimationFrame(animation);
         }
