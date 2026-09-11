@@ -292,21 +292,27 @@ export default function ContactFormModal({
       };
 
       let response;
+      const isLocalhost = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+      const primaryEndpoint = isLocalhost ? 'http://localhost:8000/contact_mailer.php' : '/contact_mailer.php';
+
       try {
-        response = await fetch('http://localhost:8000/contact_mailer.php', {
+        response = await fetch(primaryEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
       } catch (fetchErr) {
-        try {
-          response = await fetch('/contact_mailer.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-          });
-        } catch (fetchErr2) {
-          safeToast('error', 'Network error. PHP server may not be running on port 8000.', {
+        if (isLocalhost) {
+          try {
+            response = await fetch('/contact_mailer.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+            });
+          } catch (_) {}
+        }
+        if (!response) {
+          safeToast('error', 'Network error. Please check your connection or email us directly.', {
             duration: 10000,
             position: 'top-center',
             classNames: {

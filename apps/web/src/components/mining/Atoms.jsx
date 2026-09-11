@@ -3,11 +3,72 @@ import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion
 
 export function SectionLabel({ index, children }) {
   return (
-    <div className="mb-6 flex items-center gap-4">
-      <span className="font-mono2 text-[11px] tracking-[0.35em] text-[#D4AF37]">{index}</span>
-      <span className="h-px w-10 bg-[#D4AF37]/40" />
-      <span className="font-mono2 text-[11px] uppercase tracking-[0.35em] text-white/50">{children}</span>
-    </div>
+    <motion.div 
+      className="mb-6 flex items-center gap-4"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: '-14% 0px' }}
+      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {index && (
+        <span className="font-mono2 text-[11px] tracking-[0.35em] text-[#D4AF37]">{index}</span>
+      )}
+      
+      {/* ONE unified container for line + text with continuous sweep */}
+      <div className="relative flex items-center gap-4">
+        {/* Soft glow sweep - starts at line, ends at text */}
+        <motion.div
+          className="absolute pointer-events-none"
+          style={{
+            left: '-20px',
+            top: '-12px',
+            bottom: '-12px',
+            width: '300px',
+            background: 'linear-gradient(90deg, transparent, rgba(212,175,55,0.5), rgba(212,175,55,0.3), transparent)',
+            backgroundSize: '200% 100%',
+            filter: 'blur(16px)',
+          }}
+          animate={{
+            backgroundPosition: ['200% 0%', '-200% 0%'],
+          }}
+          transition={{
+            duration: 3.5,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        />
+
+        {/* Animated line */}
+        <div className="relative h-px w-10">
+          <motion.span
+            className="absolute inset-0 bg-[#D4AF37]/40 origin-left"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.1, ease: [0.65, 0, 0.35, 1] }}
+          />
+          <motion.span
+            className="absolute inset-0 origin-left"
+            style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0))' }}
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.1, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+          />
+        </div>
+
+        {/* Label text */}
+        <motion.span
+          className="font-mono2 text-[11px] uppercase tracking-[0.35em] text-white/50 relative z-10"
+          initial={{ opacity: 0, letterSpacing: '0.55em' }}
+          whileInView={{ opacity: 1, letterSpacing: '0.35em' }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {children}
+        </motion.span>
+      </div>
+    </motion.div>
   );
 }
 

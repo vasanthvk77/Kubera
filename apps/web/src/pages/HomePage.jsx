@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Box, Typography } from '@mui/material';
-import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform, useSpring, useReducedMotion } from 'framer-motion';
 import {
   Satellite, Map, Drill, FlaskConical, Truck, Train, Ship, Warehouse, Factory,
   Leaf, Droplets, HardHat, Users, Sun, ShieldCheck, Globe2, Award, Clock,
@@ -105,12 +105,12 @@ const PARALLAX = {
 
   SECTION_04_COAL_MINING: {
     scrollDriftMultiplier: 1.0,
-    scrollZoomMultiplier: 1.0,
+    scrollZoomMultiplier: 2.0,
   },
 
   SECTION_05_MINERAL_PROCESSING: {
     scrollDriftMultiplier: 1,
-    scrollZoomMultiplier: 1,
+    scrollZoomMultiplier: 2.0,
   },
 
   SECTION_06_GLOBAL_TRADING: {
@@ -458,23 +458,73 @@ function DepthCounter({ depthNum }) {
 
 /*
  * Layer depth values (metres):
- *   Top Soil        0  –   4
- *   Rock Formation  4  –  60
- *   Mineral Dep.   60  – 180
- *   Gold Veins    180  – 410
- *   Coal Seams    410  – 620
- * Total range: 620 m
- * Each layer's tick position = its START depth / 620
+ *   Top Soil        0  –   4   (Row 0:  0% - 20%)
+ *   Rock Formation  4  –  60   (Row 1: 20% - 40%)
+ *   Mineral Dep.   60  – 180   (Row 2: 40% - 60%)
+ *   Gold Veins    180  – 410   (Row 3: 60% - 80%)
+ *   Coal Seams    410  – 620   (Row 4: 80% - 100%)
  */
-const TOTAL_DEPTH = 620;
 const RULER_TICKS = [
-  { depth: 0, label: '0 m' },
-  { depth: 4, label: '4 m' },
-  { depth: 60, label: '60 m' },
-  { depth: 180, label: '180 m' },
-  { depth: 410, label: '410 m' },
-  { depth: 620, label: '620 m' },
+  { pct: 0, label: '0 m' },
+  { pct: 20, label: '4 m' },
+  { pct: 40, label: '60 m' },
+  { pct: 60, label: '180 m' },
+  { pct: 80, label: '410 m' },
+  { pct: 100, label: '620 m' },
 ];
+
+function LayerRows({ LAYERS, activeLayer }) {
+  return (
+    <div className="flex-1 pl-4 sm:pl-6 md:pl-8 grid grid-rows-5 h-full">
+      {LAYERS.map((l, i) => {
+        const isActive = i === activeLayer;
+        const isPast  = i < activeLayer;
+
+        return (
+          <motion.div
+            key={l.name}
+            animate={{
+              opacity: isPast ? 0.38 : isActive ? 1 : 0.18,
+              y: isActive ? 0 : isPast ? 0 : 4,
+            }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="relative grid grid-cols-[7.5rem_13rem_1fr] sm:grid-cols-[9rem_14rem_1fr] items-center gap-3 border-b border-white/[0.06]"
+          >
+            {/* Active accent bar */}
+            {isActive && (
+              <motion.div
+                layoutId="activeBar"
+                className="absolute -left-2 top-2 bottom-2 w-0.5 rounded-full"
+                style={{ background: l.accent }}
+              />
+            )}
+
+            {/* Depth range */}
+            <span
+              className="font-mono2 text-[11px] tracking-[0.22em] whitespace-nowrap"
+              style={{ color: isActive ? l.accent : '#ffffff33' }}
+            >
+              {l.depth}
+            </span>
+
+            {/* Layer name */}
+            <span
+              className="font-display text-xl sm:text-2xl"
+              style={{ color: isActive ? '#ffffff' : '#ffffff44' }}
+            >
+              {l.name}
+            </span>
+
+            {/* Note */}
+            <span className="text-xs sm:text-sm leading-relaxed text-white">
+              {l.note}
+            </span>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+}
 
 function SceneStrata() {
   const sectionRef = useRef(null);
@@ -486,22 +536,11 @@ function SceneStrata() {
     offset: ['start start', 'end end'],
   });
 
-  /* Active layer index — matches actual depth boundaries (m):
-   *   Top Soil:       0 –   4
-   *   Rock Formation:  4 –  60
-   *   Mineral Dep.:   60 – 180
-   *   Gold Veins:    180 – 410
-   *   Coal Seams:    410 – 620
-   */
-  const LAYER_STARTS = [0, 4, 60, 180, 410];
+  /* Active layer index matches the 5 evenly spaced row bands (20% each) */
   const [activeLayer, setActiveLayer] = useState(0);
   useEffect(() => {
     const unsub = scrollYProgress.onChange((v) => {
-      const depth = v * TOTAL_DEPTH;
-      let idx = 0;
-      for (let i = LAYER_STARTS.length - 1; i >= 0; i--) {
-        if (depth >= LAYER_STARTS[i]) { idx = i; break; }
-      }
+      const idx = Math.min(4, Math.max(0, Math.floor(v * 5)));
       setActiveLayer(idx);
     });
     return unsub;
@@ -509,13 +548,16 @@ function SceneStrata() {
 
   /*
    * Ruler indicator:
-   * Maps scroll 0→1 to depth 0→620 m.
-   * Then maps depth to a percentage of the ruler track height
-   * using proportional positioning (not equal spacing).
-   * rulerPct = depth / 620  →  0% to 100% of the ruler track.
+   * Maps scroll 0→1 across the 5 rows smoothly.
+   * Maps scroll to depth in metres accurately:
+   * 0% -> 0m, 20% -> 4m, 40% -> 60m, 60% -> 180m, 80% -> 410m, 100% -> 620m
    */
-  const depthNum = useTransform(scrollYProgress, [0, 1], [0, TOTAL_DEPTH]);
-  const rulerPct = useTransform(depthNum, (d) => `${(d / TOTAL_DEPTH) * 100}%`);
+  const depthNum = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.4, 0.6, 0.8, 1],
+    [0, 4, 60, 180, 410, 620]
+  );
+  const rulerPct = useTransform(scrollYProgress, (v) => `${Math.min(100, Math.max(0, v * 100))}%`);
 
   return (
     <section
@@ -532,7 +574,7 @@ function SceneStrata() {
           src={IMG.strata}
           alt="Geological strata"
           {..._getParallax(PARALLAX.SECTION_01_OPERATIONS_JOURNEY, 40, 1.12)}
-          overlay="bg-[#0D0D0D]/80"
+          overlay="bg-[#0D0D0D]/10"
         />
 
         {/* Layer tint */}
@@ -549,50 +591,48 @@ function SceneStrata() {
 
           {/* Heading */}
           <div className="mb-8">
-            <SectionLabel index="01">Journey Beneath the Earth</SectionLabel>
+            <SectionLabel>Journey Beneath the Earth</SectionLabel>
             <Heading>Six hundred metres<br />of measured descent.</Heading>
           </div>
 
           {/*
            * Layer list + ruler side by side.
-           * Ruler is a narrow column (w-14) placed IMMEDIATELY to the left
-           * of the layer rows, not at the screen edge.
+           * Ruler ticks align exactly with each layer row.
            */}
-          <div className="flex items-stretch gap-0 border-t border-white/[0.08]">
+          <div className="flex gap-4 sm:gap-6 border-t border-white/[0.08]" style={{ height: '55vh' }}>
 
-            {/* ── Depth ruler — sits right next to the layer list ── */}
+            {/* ── Depth ruler — aligned row-by-row with the layer list ── */}
             <div
               ref={layerListRef}
-              className="block relative flex-shrink-0"
-              style={{ width: '3.25rem' }}
+              className="relative flex-shrink-0 h-full"
+              style={{ width: '4.5rem' }}
             >
               {/* Track line */}
-              <div className="absolute top-0 bottom-0 w-px bg-white/10" style={{ left: '1.625rem' }} />
+              <div className="absolute top-0 bottom-0 w-px bg-white/10" style={{ left: '1.25rem' }} />
 
               {/* Gold fill — grows proportionally with depth */}
               <motion.div
                 className="absolute w-px origin-top"
                 style={{
-                  left: '1.625rem',
+                  left: '1.25rem',
                   top: 0,
                   height: rulerPct,
                   background: 'linear-gradient(to bottom, #D4AF3766, #D4AF37)',
                 }}
               />
 
-              {/* Proportional tick marks — spaced by actual metre values */}
-              {RULER_TICKS.map(({ depth, label }) => {
-                const pct = (depth / TOTAL_DEPTH) * 100;
+              {/* Ticks — perfectly aligned at the top of each layer row (0%, 20%, 40%, 60%, 80%, 100%) */}
+              {RULER_TICKS.map(({ pct, label }) => {
                 return (
                   <div
                     key={label}
                     className="absolute flex items-center"
-                    style={{ top: `${pct}%`, left: '1.25rem' }}
+                    style={{ top: `${pct}%`, left: '0.75rem', transform: 'translateY(-50%)' }}
                   >
-                    {/* tick line */}
-                    <div className="w-1.5 h-px bg-white/25" />
-                    {/* label */}
-                    <span className="ml-1 font-mono2 text-[7px] sm:text-[8px] tracking-[0.1em] text-white/35 whitespace-nowrap">
+                    {/* tick line ending at the vertical track line */}
+                    <div className="w-2 h-px bg-white/30" />
+                    {/* proper space between the line and the meter label */}
+                    <span className="ml-2.5 font-mono2 text-[8px] sm:text-[9px] tracking-[0.1em] text-white/40 whitespace-nowrap">
                       {label}
                     </span>
                   </div>
@@ -602,9 +642,9 @@ function SceneStrata() {
               {/* Gold travelling indicator dot */}
               <motion.div
                 className="absolute flex flex-col items-center"
-                style={{ left: '1.15rem', top: rulerPct, transform: 'translateY(-50%)' }}
+                style={{ left: '1.25rem', top: rulerPct, transform: 'translate(-50%, -50%)' }}
               >
-                {/* dot */}
+                {/* dot centered on the track line */}
                 <div
                   className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full z-10"
                   style={{
@@ -612,62 +652,18 @@ function SceneStrata() {
                     boxShadow: '0 0 0 3px rgba(212,175,55,0.2), 0 0 12px rgba(212,175,55,0.7)',
                   }}
                 />
-                {/* depth badge — below dot, not overlapping content */}
-                <div className="mt-1 rounded-sm border border-[#D4AF37]/40 bg-[#0D0D0D]/90 px-1.5 py-0.5 whitespace-nowrap">
+                {/* depth badge — below dot, cleanly centered */}
+                <div className="mt-1 rounded-sm border border-[#D4AF37]/40 bg-[#0D0D0D]/90 px-1.5 py-0.5 whitespace-nowrap shadow-md">
                   <DepthCounter depthNum={depthNum} />
                 </div>
               </motion.div>
             </div>
 
-            {/* ── Layer rows ── */}
-            <div className="flex-1 pl-8 sm:pl-4 md:pl-6">
-              {LAYERS.map((l, i) => {
-                const isActive = i === activeLayer;
-                const isPast = i < activeLayer;
-                return (
-                  <motion.div
-                    key={l.name}
-                    animate={{
-                      opacity: isPast ? 0.38 : isActive ? 1 : 0.18,
-                      y: isActive ? 0 : isPast ? 0 : 6,
-                    }}
-                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative grid gap-3 border-b border-white/[0.06] py-6
-                               md:grid-cols-[9rem_14rem_1fr] md:items-baseline"
-                  >
-                    {/* Active accent bar on left edge of row */}
-                    {isActive && (
-                      <motion.div
-                        layoutId="activeBar"
-                        className="absolute -left-1 top-0 bottom-0 w-0.5 rounded-full"
-                        style={{ background: l.accent }}
-                      />
-                    )}
-
-                    {/* Depth range */}
-                    <span
-                      className="font-mono2 text-[11px] tracking-[0.22em]"
-                      style={{ color: isActive ? l.accent : '#ffffff33' }}
-                    >
-                      {l.depth}
-                    </span>
-
-                    {/* Layer name */}
-                    <span
-                      className="font-display text-2xl"
-                      style={{ color: isActive ? '#ffffff' : '#ffffff44' }}
-                    >
-                      {l.name}
-                    </span>
-
-                    {/* Note */}
-                    <span className="text-sm leading-relaxed text-white/38">
-                      {l.note}
-                    </span>
-                  </motion.div>
-                );
-              })}
-            </div>
+            {/* ── Layer rows (5 rows matching the 5 ruler tick intervals) ── */}
+            <LayerRows
+              LAYERS={LAYERS}
+              activeLayer={activeLayer}
+            />
 
           </div>
         </div>
@@ -684,425 +680,243 @@ const EXPLORE = [
   { icon: FlaskConical, title: 'Resource Analysis', body: 'JORC-compliant estimation, independently audited before any capital commitment.', stat: 'JORC 2012 compliant' },
 ];
 
+function ExplorationCardItem({ item, index, total, active }) {
+  const Icon = item.icon;
+  const isCurrent = index === active;
+  const isPrevious = index < active;
+  const isUpcoming = index > active;
+
+  return (
+    <motion.div
+      initial={false}
+      animate={
+        isCurrent
+          ? { y: 0, scale: 1, opacity: 1, zIndex: 10 }
+          : isPrevious
+          ? { y: -32, scale: 0.94, opacity: 0, zIndex: index + 1 }
+          : { y: 160, scale: 0.92, opacity: 0, zIndex: index + 1 }
+      }
+      transition={{
+        type: 'spring',
+        stiffness: 75,
+        damping: 20,
+        mass: 0.85,
+      }}
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        transformOrigin: 'top center',
+        willChange: 'transform, opacity',
+      }}
+      className="relative w-full rounded-sm border border-white/12 bg-[#141414] p-10 shadow-2xl shadow-black/90 overflow-hidden"
+    >
+      {/* Top gold hairline */}
+      <div
+        className="pointer-events-none absolute left-0 top-0 h-px w-full"
+        style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0.25), transparent)' }}
+      />
+
+      {/* Step counter inside card */}
+      <div className="mb-5 flex items-center gap-3">
+        <span className="font-mono2 text-[10px] tracking-[0.35em] text-[#D4AF37]/60 uppercase">
+          {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
+        </span>
+        <div className="h-px flex-1 bg-white/10" />
+      </div>
+
+      {/* Icon */}
+      <div className="relative inline-flex">
+        <div className="relative">
+          <Icon className="h-7 w-7 text-[#D4AF37]" strokeWidth={1.2} />
+          <div
+            className="pointer-events-none absolute -inset-3 rounded-full"
+            style={{ boxShadow: '0 0 16px rgba(212,175,55,0.12)' }}
+          />
+        </div>
+      </div>
+
+      {/* Title */}
+      <div className="mt-6">
+        <h3 className="font-display text-3xl text-white">
+          {item.title}
+        </h3>
+      </div>
+
+      {/* Body */}
+      <p className="mt-4 leading-relaxed text-white/60">
+        {item.body}
+      </p>
+
+      {/* Stat */}
+      <div className="mt-8 relative">
+        <div
+          className="h-px w-full"
+          style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.14), rgba(212,175,55,0.28), transparent)' }}
+        />
+        <p className="pt-5 font-mono2 text-[11px] uppercase tracking-[0.25em] text-[#B87333]">
+          {item.stat}
+        </p>
+      </div>
+
+      {/* Corner gold tick */}
+      <div className="pointer-events-none absolute right-0 bottom-0">
+        <div className="h-4 w-px bg-[#D4AF37]/60 absolute right-0 bottom-0" />
+        <div className="h-px w-4 bg-[#D4AF37]/60 absolute right-0 bottom-0" />
+      </div>
+    </motion.div>
+  );
+}
+
 function SceneExploration() {
   const sectionRef = useRef(null);
   const [active, setActive] = useState(0);
-  const reduce = false;
-  const Active = EXPLORE[active].icon;
 
-  /* ---------- Scroll-driven parallax & reveal progress ---------- */
+  /*
+   * Scroll-driven sticky sequencing:
+   * Section is 450vh tall. As user reaches each card trigger,
+   * the card automatically animates and settles cleanly into position.
+   */
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
+    offset: ['start start', 'end end'],
   });
-  const entryProgress = useTransform(scrollYProgress, [0, 0.35], [0, 1]);
+
+  useEffect(() => {
+    const update = (v) => {
+      const idx = Math.min(EXPLORE.length - 1, Math.max(0, Math.floor(v * EXPLORE.length)));
+      setActive(idx);
+    };
+    if (typeof scrollYProgress.on === 'function') {
+      return scrollYProgress.on('change', update);
+    } else if (typeof scrollYProgress.onChange === 'function') {
+      return scrollYProgress.onChange(update);
+    }
+  }, [scrollYProgress]);
+
+  /* Background parallax driven by scroll position */
   const explorationParallax = _getParallax(PARALLAX.SECTION_02_EXPLORATION, 60, 1.18);
   const bgY = useTransform(scrollYProgress, [0, 1], [explorationParallax.strength, -explorationParallax.strength]);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1, explorationParallax.scaleTo]);
-
-  /* ---------- Mouse parallax state (lerped) ---------- */
-  const mouseRef = useRef({ tx: 0, ty: 0, cx: 0, cy: 0 });
-  const [, forceTick] = useState(0);
-
-  useEffect(() => {
-    if (reduce) return;
-    let rafId;
-    function tick() {
-      const m = mouseRef.current;
-      let changed = false;
-      const dx = m.tx - m.cx;
-      const dy = m.ty - m.cy;
-      if (Math.abs(dx) > 0.0008 || Math.abs(dy) > 0.0008) {
-        m.cx += dx * 0.07;
-        m.cy += dy * 0.07;
-        changed = true;
-      }
-      if (changed) forceTick((t) => (t + 1) % 1000000);
-      rafId = requestAnimationFrame(tick);
-    }
-    rafId = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafId);
-  }, [reduce]);
-
-  function handleMouseMove(e) {
-    if (reduce) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const nx = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-    const ny = ((e.clientY - rect.top) / rect.height) * 2 - 1;
-    mouseRef.current.tx = nx;
-    mouseRef.current.ty = ny;
-  }
-  const m = mouseRef.current;
-
-  /* Heading split into words for stagger mask reveal */
-  const HEADING_WORDS = ['We', 'know', 'the', 'ground', 'before', 'we', 'break', 'it.'];
-  const HEADING_LINES = [
-    ['We', 'know', 'the', 'ground'],
-    ['before', 'we', 'break', 'it.'],
-  ];
 
   return (
     <section
       id="exploration"
       ref={sectionRef}
-      className="relative overflow-hidden py-16 lg:py-44"
-      onMouseMove={handleMouseMove}
-      style={{ willChange: 'transform' }}
+      style={{ height: '450vh' }}
+      className="relative"
     >
-      {/* ──────── Enhanced parallax background with stronger depth ──────── */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.img
-          src={IMG.rig}
-          alt="Core drilling rig at dusk"
-          loading="lazy"
-          style={reduce ? undefined : {
-            y: bgY,
-            scale: bgScale,
-            opacity: 0.9,
-            height: `${explorationParallax.defaultZoomPct}%`,
-            width: '106%',
-            transform: `translateY(-${explorationParallax.defaultShiftUpPct}%) translateX(-3%)`,
-            objectFit: 'cover',
-          }}
-          className="absolute inset-0"
-        />
-        {/* Multi-stop gradient overlay for cinematic depth */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D]/70 via-[#0D0D0D]/55 to-[#0D0D0D]/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/60 via-transparent to-[#0D0D0D]" />
-        {/* Radial warm vignette */}
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 55% at 82% 50%, rgba(184,115,51,0.18), transparent 62%)' }} />
-        {/* Cool counter-vignette on the left */}
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 50% 70% at 10% 40%, rgba(20,30,50,0.28), transparent 60%)' }} />
-      </div>
-
-      {/* ──────── Decorative accent lines (reveal on scroll entry) ──────── */}
-      <motion.div
-        className="pointer-events-none absolute left-0 top-0 h-px w-full origin-left"
-        style={{
-          background: 'linear-gradient(to right, transparent, rgba(212,175,55,0.4), rgba(184,115,51,0.1), transparent)',
-        }}
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true, margin: '-10% 0px' }}
-        transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
-      />
-      <motion.div
-        className="pointer-events-none absolute right-0 top-0 bottom-0 w-px origin-top"
-        style={{
-          background: 'linear-gradient(to bottom, transparent, rgba(212,175,55,0.28), transparent)',
-        }}
-        initial={{ scaleY: 0 }}
-        whileInView={{ scaleY: 1 }}
-        viewport={{ once: true, margin: '-10% 0px' }}
-        transition={{ duration: 1.6, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
-      />
-
-      {/* ──────── Ambient gold particle drift ──────── */}
-      <Particles count={22} tone="#D4AF37" />
-
-      {/* ──────── Main content ──────── */}
-      <div
-        className="relative mx-auto grid max-w-[90rem] gap-16 px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:px-10"
-        style={{ willChange: 'transform' }}
-      >
-        {/* ════════ LEFT COLUMN ════════ */}
-        <div
-          className="relative"
-          style={reduce ? undefined : {
-            transform: `translate3d(${m.cx * -14}px, ${m.cy * -10}px, 0)`,
-            willChange: 'transform',
-          }}
-        >
-          {/* ── Section Label with animated gold line sweep ── */}
-          <motion.div
-            className="mb-6 flex items-center gap-4"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-14% 0px' }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <motion.span
-              className="font-mono2 text-[11px] tracking-[0.35em] text-[#D4AF37]"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-            >
-              02
-            </motion.span>
-            <span className="relative h-px w-10 overflow-hidden">
-              <motion.span
-                className="absolute inset-0 bg-[#D4AF37]/40 origin-left"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, delay: 0.1, ease: [0.65, 0, 0.35, 1] }}
-              />
-              <motion.span
-                className="absolute inset-0 origin-left"
-                style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0))' }}
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.1, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              />
-            </span>
-            <motion.span
-              className="font-mono2 text-[11px] uppercase tracking-[0.35em] text-white/50"
-              initial={{ opacity: 0, letterSpacing: '0.55em' }}
-              whileInView={{ opacity: 1, letterSpacing: '0.35em' }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            >
-              Exploration
-            </motion.span>
-          </motion.div>
-
-          {/* ── Heading: GOLD GLOW SWEEP-REVEAL using MUI ── */}
-          <HeroTextAnimation reduce={reduce} />
-
-          {/* ── Sub-paragraph with soft clip-reveal (single driver + nested inherit, NO nested whileInView) ── */}
-          <div className="mt-7 max-w-md overflow-hidden">
-            <motion.div
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.95, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[15px] leading-relaxed text-white/50"
-              style={reduce ? undefined : {
-                transform: `translate3d(${m.cx * -6}px, ${m.cy * -4}px, 0)`,
-                willChange: 'transform',
-              }}
-            >
-              <motion.p
-                initial={{ clipPath: 'inset(0 0 100% 0)' }}
-                animate={undefined}
-                transition={{ duration: 1.1, delay: 0.05, ease: [0.76, 0, 0.24, 1] }}
-                whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
-                viewport={{ once: true, margin: '-10% 0px' }}
-              >
-                Four disciplines, sequenced. Nothing enters development until the orebody has been modelled, drilled and independently verified.
-              </motion.p>
-            </motion.div>
-          </div>
-
-          {/* ── Tab Buttons: staggered reveal from offset left ── */}
-          <div className="mt-10 flex flex-wrap gap-2">
-            {EXPLORE.map((e, i) => (
-              <motion.button
-                key={e.title}
-                onClick={() => setActive(i)}
-                initial={reduce ? { opacity: 0 } : { opacity: 0, x: -26, rotateX: -12 }}
-                whileInView={reduce ? { opacity: 1 } : { opacity: 1, x: 0, rotateX: 0 }}
-                viewport={{ once: true, margin: '-10% 0px' }}
-                transition={{
-                  duration: 0.75,
-                  delay: 0.72 + i * 0.07,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                whileHover={reduce ? undefined : { y: -2, scale: 1.02 }}
-                whileTap={reduce ? undefined : { scale: 0.97 }}
-                className={`relative overflow-hidden rounded-sm border px-4 py-2.5 font-mono2 text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${i === active
-                  ? 'border-[#D4AF37] bg-[#D4AF37]/10 text-[#D4AF37]'
-                  : 'border-white/12 text-white/45 hover:border-white/30 hover:text-white/80'
-                  }`}
-                style={{ transformPerspective: 600, willChange: 'transform, opacity' }}
-              >
-                <motion.span
-                  className="pointer-events-none absolute inset-0 origin-left"
-                  style={{ background: 'linear-gradient(90deg, rgba(212,175,55,0.18), transparent 65%)' }}
-                  animate={{
-                    x: i === active ? '0%' : '-105%',
-                    opacity: i === active ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-                />
-                <span className="relative">{e.title}</span>
-              </motion.button>
-            ))}
-          </div>
+      {/* ── Sticky viewport — stays fixed while user scrolls through section ── */}
+      <div className="sticky top-0 h-screen overflow-hidden">
+        {/* ──────── Parallax background ──────── */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.img
+            src={IMG.rig}
+            alt="Core drilling rig at dusk"
+            loading="lazy"
+            style={{
+              y: bgY,
+              scale: bgScale,
+              opacity: 1,
+              height: `${explorationParallax.defaultZoomPct}%`,
+              width: '106%',
+              transform: `translateY(-${explorationParallax.defaultShiftUpPct}%) translateX(-3%)`,
+              objectFit: 'cover',
+            }}
+            className="absolute inset-0"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D]/60 via-[#0D0D0D]/40 to-[#0D0D0D]/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/50 via-transparent to-[#0D0D0D]" />
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 55% at 82% 50%, rgba(184,115,51,0.18), transparent 62%)' }} />
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 50% 70% at 10% 40%, rgba(20,30,50,0.28), transparent 60%)' }} />
         </div>
 
-        {/* ════════ RIGHT COLUMN — Glass Card ════════ */}
-        <motion.div
-          className="relative"
-          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 60, scale: 0.94, rotateX: 6 }}
-          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-          viewport={{ once: true, margin: '-12% 0px' }}
-          transition={{
-            duration: 1.1,
-            delay: 0.3,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-          style={reduce ? undefined : {
-            transform: `translate3d(${m.cx * 18}px, ${m.cy * 14}px, 0) perspective(1200px) rotateX(${m.cy * -2}deg) rotateY(${m.cx * 2.5}deg)`,
-            transformStyle: 'preserve-3d',
-            willChange: 'transform',
-          }}
-        >
-          {/* Glow halo behind the card that pulses with active state */}
-          <motion.div
-            className="pointer-events-none absolute -inset-6 -z-10"
-            animate={{
-              opacity: [0.5, 0.8, 0.5],
-              scale: [1, 1.04, 1],
-            }}
-            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-            style={{
-              background: 'radial-gradient(ellipse 60% 55% at 50% 45%, rgba(212,175,55,0.22), transparent 70%)',
-              filter: 'blur(24px)',
-            }}
-          />
+        {/* ──────── Decorative accent lines ──────── */}
+        <div
+          className="pointer-events-none absolute left-0 top-0 h-px w-full"
+          style={{ background: 'linear-gradient(to right, transparent, rgba(212,175,55,0.4), rgba(184,115,51,0.1), transparent)' }}
+        />
+        <div
+          className="pointer-events-none absolute right-0 top-0 bottom-0 w-px"
+          style={{ background: 'linear-gradient(to bottom, transparent, rgba(212,175,55,0.28), transparent)' }}
+        />
 
-          <motion.div
-            key={active}
-            initial={reduce ? { opacity: 0 } : {
-              opacity: 0,
-              y: 22,
-              scale: 0.985,
-              rotateZ: 0.3,
-            }}
-            animate={reduce ? { opacity: 1 } : {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              rotateZ: 0,
-            }}
-            transition={{
-              duration: 0.65,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="glass relative rounded-sm p-10 overflow-hidden"
-          >
-            {/* Top hairline with sweep-in */}
-            <motion.div
-              className="pointer-events-none absolute left-0 top-0 h-px w-full origin-left"
-              style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0.25), transparent)' }}
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: 0.7, ease: [0.76, 0, 0.24, 1] }}
-            />
+        <Particles count={20} tone="#D4AF37" />
 
-            {/* Icon with 360° spin on change + gold pulse ring */}
-            <div className="relative inline-flex">
-              <motion.div
-                key={`icon-${active}`}
-                initial={{ rotateZ: -90, scale: 0.4, opacity: 0 }}
-                animate={{ rotateZ: 0, scale: 1, opacity: 1 }}
-                transition={{ duration: 0.7, ease: [0.34, 1.56, 0.64, 1] }}
-                className="relative"
-                style={{ transformStyle: 'preserve-3d' }}
-              >
-                <Active className="h-7 w-7 text-[#D4AF37]" strokeWidth={1.2} />
-                <motion.div
-                  className="pointer-events-none absolute -inset-3 rounded-full"
-                  animate={{
-                    boxShadow: [
-                      '0 0 0 0 rgba(212,175,55,0.0)',
-                      '0 0 0 8px rgba(212,175,55,0.12)',
-                      '0 0 0 0 rgba(212,175,55,0.0)',
-                    ],
-                  }}
-                  transition={{ duration: 2.6, repeat: Infinity, ease: 'easeOut' }}
-                />
-              </motion.div>
-            </div>
+        {/* ──────── Main content grid ──────── */}
+        <div className="relative flex h-full items-center">
+          <div className="mx-auto grid w-full max-w-[90rem] gap-16 px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:px-10">
+            {/* ════════ LEFT COLUMN ════════ */}
+            <div className="relative">
+              {/* Section label */}
+              <div className="mb-6 flex items-center gap-4">
+                <SectionLabel>Exploration</SectionLabel>
+              </div>
 
-            {/* Title with letter stagger (variants + staggerChildren, synced with mask-wipe) */}
-            <div className="mt-6 overflow-hidden">
-              <motion.div
-                key={`title-${active}`}
-                variants={reduce ? undefined : {
-                  hidden: { y: '110%' },
-                  visible: {
-                    y: '0%',
-                    transition: {
-                      duration: 0.75,
-                      delay: 0.08,
-                      ease: [0.76, 0, 0.24, 1],
-                      staggerChildren: 0.018,
-                      delayChildren: 0.02,
-                    },
-                  },
-                }}
-                initial={reduce ? undefined : 'hidden'}
-                animate={reduce ? undefined : 'visible'}
-              >
-                <h3 className="font-display text-3xl text-white">
-                  {EXPLORE[active].title.split('').map((ch, ci) => (
-                    <motion.span
-                      key={ci}
-                      variants={reduce ? undefined : {
-                        hidden: { opacity: 0, y: 12 },
-                        visible: {
-                          opacity: 1,
-                          y: 0,
-                          transition: {
-                            duration: 0.4,
-                            ease: [0.16, 1, 0.3, 1],
-                          },
-                        },
+              {/* Heading */}
+              <HeroTextAnimation reduce={false} />
+
+              {/* Sub-paragraph */}
+              <div className="mt-7 max-w-md">
+                <p className="text-[15px] leading-relaxed text-white/50">
+                  Four disciplines, sequenced. Nothing enters development until the orebody has been modelled, drilled and independently verified.
+                </p>
+              </div>
+
+              {/* Scroll progress dots */}
+              <div className="mt-10 flex items-center gap-3">
+                {EXPLORE.map((e, i) => (
+                  <div
+                    key={e.title}
+                    className="relative h-0.5 rounded-full overflow-hidden bg-white/10 transition-all duration-300"
+                    style={{ width: i === active ? '2.5rem' : '1rem' }}
+                  >
+                    <div
+                      className="absolute inset-y-0 left-0 rounded-full transition-all duration-300"
+                      style={{
+                        background: '#D4AF37',
+                        width: i === active ? '100%' : '0%',
                       }}
-                      className="inline-block"
-                    >
-                      {ch === ' ' ? '\u00A0' : ch}
-                    </motion.span>
-                  ))}
-                </h3>
-              </motion.div>
+                    />
+                  </div>
+                ))}
+                <span className="ml-2 font-mono2 text-[10px] tracking-[0.25em] text-white/35 uppercase">
+                  {String(active + 1).padStart(2, '0')} / {String(EXPLORE.length).padStart(2, '0')}
+                </span>
+              </div>
+
+              {/* Hint label */}
+              <p className="mt-4 font-mono2 text-[9px] uppercase tracking-[0.3em] text-white/20">
+                Scroll to explore
+              </p>
             </div>
 
-            {/* Body with soft fade + clip reveal */}
-            <motion.p
-              key={`body-${active}`}
-              initial={{ opacity: 0, y: 14, clipPath: 'inset(0 0 100% 0)' }}
-              animate={{ opacity: 1, y: 0, clipPath: 'inset(0 0 0% 0)' }}
-              transition={{
-                duration: 0.75,
-                delay: 0.22,
-                ease: [0.16, 1, 0.3, 1],
-                clipPath: { duration: 0.9, ease: [0.76, 0, 0.24, 1] },
-              }}
-              className="mt-4 leading-relaxed text-white/55"
-            >
-              {EXPLORE[active].body}
-            </motion.p>
-
-            {/* Stat divider with draw-in border + stat label stagger */}
-            <div className="mt-8 relative">
-              <motion.div
-                className="h-px w-full origin-left"
-                style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.14), rgba(212,175,55,0.28), transparent)' }}
-                key={`divider-${active}`}
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.85, delay: 0.32, ease: [0.65, 0, 0.35, 1] }}
+            {/* ════════ RIGHT COLUMN — Stacked Scroll Cards ════════ */}
+            <div className="relative min-h-[440px] flex items-center">
+              {/* Ambient Glow */}
+              <div
+                className="pointer-events-none absolute -inset-10 -z-10 rounded-3xl opacity-60"
+                style={{
+                  background: 'radial-gradient(ellipse 65% 55% at 50% 50%, rgba(212,175,55,0.14), transparent 70%)',
+                }}
               />
-              <motion.p
-                key={`stat-${active}`}
-                initial={{ opacity: 0, x: -14, letterSpacing: '0.45em' }}
-                animate={{ opacity: 1, x: 0, letterSpacing: '0.25em' }}
-                transition={{ duration: 0.8, delay: 0.48, ease: [0.16, 1, 0.3, 1] }}
-                className="pt-5 font-mono2 text-[11px] uppercase tracking-[0.25em] text-[#B87333]"
-              >
-                {EXPLORE[active].stat}
-              </motion.p>
-            </div>
 
-            {/* Bottom-right corner gold tick */}
-            <motion.div
-              className="pointer-events-none absolute right-0 bottom-0"
-              initial={{ opacity: 0, scale: 0.4 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 1.1, ease: [0.34, 1.56, 0.64, 1] }}
-            >
-              <div className="h-4 w-px bg-[#D4AF37]/60 absolute right-0 bottom-0" />
-              <div className="h-px w-4 bg-[#D4AF37]/60 absolute right-0 bottom-0" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
+              {/* Stack of scroll-driven cards */}
+              <div className="relative w-full min-h-[420px]">
+                {EXPLORE.map((item, index) => (
+                  <ExplorationCardItem
+                    key={item.title}
+                    item={item}
+                    index={index}
+                    total={EXPLORE.length}
+                    active={active}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -1214,12 +1028,12 @@ function SceneGold() {
         src={IMG.goldVein}
         alt="Illuminated gold vein underground"
         {..._getParallax(PARALLAX.SECTION_03_GOLD_MINING, 100, 1.12)}
-        overlay="bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/70 to-[#0D0D0D]"
+        overlay="bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/10 to-[#0D0D0D]"
       />
       <Particles count={34} />
       <div className="relative mx-auto max-w-[72rem] px-6 text-center lg:px-10">
         <Rise>
-          <p className="font-mono2 text-[10px] uppercase tracking-[0.4em] text-[#D4AF37]">03 — Gold Mining</p>
+          <p className="font-mono2 text-[10px] uppercase tracking-[0.4em] text-[#D4AF37]">Gold Mining</p>
           <GoldSweepText />
         </Rise>
         <Rise delay={0.15}>
@@ -1278,13 +1092,13 @@ function SceneCoal() {
         src={IMG.coal}
         alt="Open-cut coal mine with haul trucks"
         {..._getParallax(PARALLAX.SECTION_04_COAL_MINING, 90, 1.12)}
-        overlay="bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/78 to-[#0D0D0D]/90"
+        overlay="bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/18 to-[#0D0D0D]/30"
       />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0D0D0D] to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0D0D0D] to-transparent" />
       <div className="relative mx-auto max-w-[90rem] px-6 lg:px-10">
         <Rise>
-          <SectionLabel index="04">Coal Mining</SectionLabel>
+          <SectionLabel>Coal Mining</SectionLabel>
           <div className="flex flex-col">
             <Heading>Scale, moved<br />one bench at a time.</Heading>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/50">
@@ -1313,12 +1127,12 @@ const PIPELINE = ['Ore Extraction', 'Crushing', 'Grinding', 'Separation', 'Refin
 function SceneProcessing() {
   return (
     <section id="processing" className="relative overflow-hidden py-16 lg:py-44">
-      <ParallaxImage src={IMG.plant} alt="Mineral processing facility interior" {..._getParallax(PARALLAX.SECTION_05_MINERAL_PROCESSING, 70, 1.12)} overlay="bg-[#0D0D0D]/60" />
+      <ParallaxImage src={IMG.plant} alt="Mineral processing facility interior" {..._getParallax(PARALLAX.SECTION_05_MINERAL_PROCESSING, 70, 1.12)} overlay="bg-[#0D0D0D]/20" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0D0D0D] to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0D0D0D] to-transparent" />
       <div className="relative mx-auto max-w-[90rem] px-6 lg:px-10">
         <Rise>
-          <SectionLabel index="05">Mineral Processing</SectionLabel>
+          <SectionLabel>Mineral Processing</SectionLabel>
           <Heading className="max-w-3xl">Eight stages between rock and market.</Heading>
         </Rise>
       </div>
@@ -1468,49 +1282,7 @@ function SceneTrading() {
             willChange: 'transform',
           }}
         >
-          <motion.div
-            className="mb-6 flex items-center gap-4"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-14% 0px' }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <motion.span
-              className="font-mono2 text-[11px] tracking-[0.35em] text-[#D4AF37]"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-            >
-              06
-            </motion.span>
-            <span className="relative h-px w-10 overflow-hidden">
-              <motion.span
-                className="absolute inset-0 bg-[#D4AF37]/40 origin-left"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, delay: 0.1, ease: [0.65, 0, 0.35, 1] }}
-              />
-              <motion.span
-                className="absolute inset-0 origin-left"
-                style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0))' }}
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.1, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              />
-            </span>
-            <motion.span
-              className="font-mono2 text-[11px] uppercase tracking-[0.35em] text-white/50"
-              initial={{ opacity: 0, letterSpacing: '0.55em' }}
-              whileInView={{ opacity: 1, letterSpacing: '0.35em' }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            >
-              Global Trading
-            </motion.span>
-          </motion.div>
+          <SectionLabel>Global Trading</SectionLabel>
 
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 40 }}
@@ -1637,49 +1409,7 @@ function SceneTrading() {
 
       {/* Logistics chain */}
       <div className="relative mx-auto mt-10 sm:mt-28 max-w-[90rem] px-6 lg:px-10">
-        <motion.div
-          className="mb-6 flex items-center gap-4"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-14% 0px' }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <motion.span
-            className="font-mono2 text-[11px] tracking-[0.35em] text-[#D4AF37]"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.05 }}
-          >
-            07
-          </motion.span>
-          <span className="relative h-px w-10 overflow-hidden">
-            <motion.span
-              className="absolute inset-0 bg-[#D4AF37]/40 origin-left"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.1, ease: [0.65, 0, 0.35, 1] }}
-            />
-            <motion.span
-              className="absolute inset-0 origin-left"
-              style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0))' }}
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.1, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            />
-          </span>
-          <motion.span
-            className="font-mono2 text-[11px] uppercase tracking-[0.35em] text-white/50"
-            initial={{ opacity: 0, letterSpacing: '0.55em' }}
-            whileInView={{ opacity: 1, letterSpacing: '0.35em' }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-          >
-            Logistics
-          </motion.span>
-        </motion.div>
+        <SectionLabel>Logistics</SectionLabel>
 
         <motion.div
           initial={reduce ? { opacity: 0 } : { opacity: 0, y: 30 }}
@@ -1914,14 +1644,14 @@ function SceneSustainability() {
   return (
     <section
       id="sustainability"
-      className="relative overflow-hidden py-25 lg:py-35"
+      className="relative overflow-hidden py-25 lg:py-35 pt-20 lg:pt-32"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{ willChange: 'transform' }}
     >
       {/* Background photo */}
-      <ParallaxImage src={IMG.green} alt="Rehabilitated mine site with forest, lake and wind turbines" {..._getParallax(PARALLAX.SECTION_08_SUSTAINABILITY, 80, 1.12)} overlay="bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/60 to-[#0D0D0D]" />
+      <ParallaxImage src={IMG.green} alt="Rehabilitated mine site with forest, lake and wind turbines" {..._getParallax(PARALLAX.SECTION_08_SUSTAINABILITY, 80, 1.12)} overlay="bg-gradient-to-b from-[#0D0D0D] via-[#0D0D0D]/20 to-[#0D0D0D]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_60%,rgba(20,83,45,0.35),transparent_60%)]" />
 
       {/* ── Three.js wind/smoke effect — z-1, behind content ── */}
@@ -1931,7 +1661,7 @@ function SceneSustainability() {
       <div className="relative z-[2] mx-auto max-w-[90rem] px-6 lg:px-10">
         <Rise>
           <div style={{ transform: `translate3d(${LABEL_X}px, ${LABEL_Y}px, 0)`, willChange: 'transform' }}>
-            <SectionLabel index="08">Sustainability</SectionLabel>
+            <SectionLabel>Sustainability</SectionLabel>
           </div>
           <div style={{ transform: `translate3d(${HEADING_X}px, ${HEADING_Y}px, 0)`, willChange: 'transform' }}>
             <Heading className="max-w-3xl">We are measured by what we leave behind.</Heading>
@@ -2054,7 +1784,7 @@ function SceneWhyUs() {
             mb: -2
           }}
         >
-          <SectionLabel index="10">Why Choose Us</SectionLabel>
+          <SectionLabel>Why Choose Us</SectionLabel>
           <Box sx={{ mt: 2, ml: -1 }}>
             {["Seven reasons buyers", "stay for decades."].map((line, index) => (
               <Box key={index} sx={{ display: 'block', mb: 1, width: '100%' }}>
@@ -2183,14 +1913,14 @@ function SceneProducts() {
     <section id="products" className="relative py-25 lg:py-30">
       <div className="mx-auto max-w-[90rem] px-6 lg:px-10">
         <Rise>
-          <SectionLabel index="11">Products</SectionLabel>
+          <SectionLabel>Products</SectionLabel>
           <Heading className="max-w-2xl">Traded in grades, not adjectives.</Heading>
         </Rise>
         <div className="mt-14"><ProductShowcase products={PRODUCTS} activeIdx={activeIdx} setActiveIdx={setActiveIdx} /></div>
 
         <Rise>
           <div className="mt-28">
-            <SectionLabel index="12">Industries We Serve</SectionLabel>
+            <SectionLabel>Industries We Serve</SectionLabel>
           </div>
         </Rise>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -2329,41 +2059,7 @@ function SceneCertsAndPresence() {
             viewport={{ once: true, margin: '-14% 0px' }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
-            <motion.span
-              className="font-mono2 text-[11px] tracking-[0.35em] text-[#D4AF37]"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-            >
-              13
-            </motion.span>
-            <span className="relative h-px w-10 overflow-hidden">
-              <motion.span
-                className="absolute inset-0 bg-[#D4AF37]/40 origin-left"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, delay: 0.1, ease: [0.65, 0, 0.35, 1] }}
-              />
-              <motion.span
-                className="absolute inset-0 origin-left"
-                style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0))' }}
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.1, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              />
-            </span>
-            <motion.span
-              className="font-mono2 text-[11px] uppercase tracking-[0.35em] text-white/50"
-              initial={{ opacity: 0, letterSpacing: '0.55em' }}
-              whileInView={{ opacity: 1, letterSpacing: '0.35em' }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            >
-              Certifications
-            </motion.span>
+            <SectionLabel>Certifications</SectionLabel>
           </motion.div>
 
           <motion.div
@@ -2396,49 +2092,7 @@ function SceneCertsAndPresence() {
               willChange: 'transform',
             }}
           >
-            <motion.div
-              className="mb-6 flex items-center gap-4"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-14% 0px' }}
-              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <motion.span
-                className="font-mono2 text-[11px] tracking-[0.35em] text-[#D4AF37]"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.05 }}
-              >
-                14
-              </motion.span>
-              <span className="relative h-px w-10 overflow-hidden">
-                <motion.span
-                  className="absolute inset-0 bg-[#D4AF37]/40 origin-left"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.9, delay: 0.1, ease: [0.65, 0, 0.35, 1] }}
-                />
-                <motion.span
-                  className="absolute inset-0 origin-left"
-                  style={{ background: 'linear-gradient(to right, #D4AF37, rgba(212,175,55,0))' }}
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.1, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-                />
-              </span>
-              <motion.span
-                className="font-mono2 text-[11px] uppercase tracking-[0.35em] text-white/50"
-                initial={{ opacity: 0, letterSpacing: '0.55em' }}
-                whileInView={{ opacity: 1, letterSpacing: '0.35em' }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-              >
-                Global Presence
-              </motion.span>
-            </motion.div>
+            <SectionLabel>Global Presence</SectionLabel>
 
             <motion.div
               initial={reduce ? { opacity: 0 } : { opacity: 0, y: 40 }}
@@ -2538,10 +2192,10 @@ function SceneCertsAndPresence() {
                 transition={{ duration: 1.3, delay: 0.75, ease: [0.76, 0, 0.24, 1] }}
               />
               <Globe pins={[
-                { label: 'Singapore HQ', x: '62%', y: '58%' },
-                { label: 'Pit head', x: '32%', y: '38%' },
-                { label: 'Export port', x: '72%', y: '32%' },
-                { label: 'Distribution', x: '44%', y: '74%' },
+                { label: 'tanzania', x: '62%', y: '58%' },
+                { label: 'Pit head Indonesia', x: '32%', y: '38%' },
+                { label: 'Export port Singapore', x: '72%', y: '32%' },
+                { label: 'Dubai', x: '44%', y: '74%' },
               ]} />
               <motion.div
                 className="pointer-events-none absolute right-0 bottom-0"
@@ -2574,7 +2228,7 @@ function SceneNews() {
     <section id="news" className="relative border-t border-white/[0.08] py-28">
       <div className="mx-auto max-w-[90rem] px-6 lg:px-10">
         <Rise>
-          <SectionLabel index="15">News & Media</SectionLabel>
+          <SectionLabel>News & Media</SectionLabel>
           <Heading className="max-w-2xl">From the operations.</Heading>
         </Rise>
         <div className="mt-12 divide-y divide-white/[0.08] border-y border-white/[0.08]">
@@ -2631,9 +2285,9 @@ function Finale({ openContactModal }) {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/40">
               Integrated mining, mineral processing and physical commodity trading across 18 markets.
             </p>
-            <p className="mt-6 flex items-center gap-2 font-mono2 text-[10px] uppercase tracking-[0.22em] text-[#B87333]">
+            {/* <p className="mt-6 flex items-center gap-2 font-mono2 text-[10px] uppercase tracking-[0.22em] text-[#B87333]">
               <Award className="h-3.5 w-3.5" strokeWidth={1.4} /> ISO 9001 · 14001 · 45001
-            </p>
+            </p> */}
           </div>
           {[
             ['Operations', [
@@ -2676,10 +2330,10 @@ function Finale({ openContactModal }) {
         </div>
         <div className="border-t border-white/[0.06] px-6 py-6 lg:px-10">
           <div className="mx-auto flex max-w-[90rem] flex-col gap-3 text-[11px] text-white/30 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-center md:text-left sm:text-left">
+            <p className="text-center md:text-left sm :text-left text-white font-mono2 tracking-[0.1em]">
               © {new Date().getFullYear()} Kubera Resources Group. All rights reserved.
             </p>
-            <p className="font-mono2 tracking-[0.2em] text-center md:text-left sm:text-left">SINGAPORE · JAKARTA · DUBAI · ROTTERDAM</p>
+            <p className="font-mono2 tracking-[0.2em] text-center md:text-left sm:text-left text-white">SINGAPORE · JAKARTA · DUBAI · ROTTERDAM</p>
           </div>
         </div>
       </footer>
@@ -2780,10 +2434,10 @@ export default function HomePage() {
         <SceneTrading />
         <SceneSustainability />
         <SceneStats />
-        <SceneWhyUs />
+        <SceneWhyUs />  
         <SceneProducts />
         <SceneCertsAndPresence />
-        <SceneNews />
+        {/* <SceneNews /> */}
         <Finale openContactModal={openContactModal} />
       </main>
       <ContactFormModal
